@@ -4,14 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ayush's Portfolio | Data Analyst & Analytics Engineer</title>
+  <meta name="description" content="Official Portfolio of Kumar Ayush Ambstha - MCA Graduate & Data Analyst specializing in Enterprise SQL, Power BI, Automated Python ETL Pipelines, and Applied Machine Learning.">
+  <meta name="keywords" content="Kumar Ayush Ambstha, Ayush Ambstha, Data Analyst, BI Analyst, Analytics Engineer, SQL Window Functions, Python ETL, Power BI DAX, Delhi NCR">
+  <meta name="author" content="Kumar Ayush Ambstha">
+
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
-  <!-- Google Fonts -->
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <script>
     tailwind.config = {
@@ -24,12 +28,13 @@
               900: '#0b0f19',
               850: '#0f172a',
               800: '#1e293b',
+              750: '#283548',
               700: '#334155'
             },
             cyan: {
-              400: '#38bdf8',
-              500: '#0ea5e9',
-              600: '#0284c7'
+              400: '#22d3ee',
+              500: '#06b6d4',
+              600: '#0891b2'
             },
             emerald: {
               400: '#34d399',
@@ -39,20 +44,20 @@
           },
           fontFamily: {
             sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-            mono: ['"Fira Code"', 'monospace']
+            mono: ['"JetBrains Mono"', 'monospace']
           },
           animation: {
             'glow-pulse': 'glowPulse 3s ease-in-out infinite',
-            'float': 'float 6s ease-in-out infinite'
+            'float': 'float 5s ease-in-out infinite'
           },
           keyframes: {
             glowPulse: {
-              '0%, 100%': { opacity: '0.4', filter: 'blur(20px)' },
-              '50%': { opacity: '0.8', filter: 'blur(28px)' }
+              '0%, 100%': { opacity: '0.35', filter: 'blur(22px)' },
+              '50%': { opacity: '0.75', filter: 'blur(30px)' }
             },
             float: {
               '0%, 100%': { transform: 'translateY(0px)' },
-              '50%': { transform: 'translateY(-12px)' }
+              '50%': { transform: 'translateY(-10px)' }
             }
           }
         }
@@ -63,41 +68,42 @@
   <style>
     /* Custom Scrollbar */
     ::-webkit-scrollbar {
-      width: 8px;
+      width: 7px;
     }
     ::-webkit-scrollbar-track {
-      background: #0b0f19;
+      background: #030712;
     }
     ::-webkit-scrollbar-thumb {
       background: #1e293b;
       border-radius: 4px;
-      border: 1px solid rgba(14, 165, 233, 0.2);
+      border: 1px solid rgba(16, 185, 129, 0.2);
     }
     ::-webkit-scrollbar-thumb:hover {
-      background: #0ea5e9;
+      background: #10b981;
     }
 
-    /* Glassmorphism Classes */
+    /* Glassmorphism System */
     .glass-card {
-      background: rgba(15, 23, 42, 0.7);
+      background: rgba(15, 23, 42, 0.72);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
       border: 1px solid rgba(255, 255, 255, 0.08);
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .glass-card:hover {
-      border-color: rgba(14, 165, 233, 0.4);
-      box-shadow: 0 10px 30px -10px rgba(14, 165, 233, 0.2);
+      border-color: rgba(16, 185, 129, 0.35);
+      box-shadow: 0 12px 35px -10px rgba(16, 185, 129, 0.15);
     }
     .glass-nav {
-      background: rgba(11, 15, 25, 0.88);
+      background: rgba(3, 7, 18, 0.88);
       backdrop-filter: blur(14px);
       -webkit-backdrop-filter: blur(14px);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.07);
     }
 
     /* Gradient Texts */
-    .gradient-text-cyan {
-      background: linear-gradient(135deg, #38bdf8 0%, #10b981 100%);
+    .gradient-text-emerald {
+      background: linear-gradient(135deg, #34d399 0%, #06b6d4 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
@@ -106,34 +112,33 @@
     #cursor-blur {
       pointer-events: none;
       position: fixed;
-      width: 450px;
-      height: 450px;
+      width: 480px;
+      height: 480px;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(14, 165, 233, 0.12) 0%, rgba(16, 185, 129, 0.04) 50%, transparent 70%);
+      background: radial-gradient(circle, rgba(16, 185, 129, 0.12) 0%, rgba(6, 182, 212, 0.05) 50%, transparent 70%);
       transform: translate(-50%, -50%);
       z-index: 1;
-      transition: width 0.3s, height 0.3s, opacity 0.3s;
+      transition: width 0.2s, height 0.2s, opacity 0.2s;
     }
 
-    /* Custom Terminal & Modal scroll */
     .custom-scroll::-webkit-scrollbar {
-      height: 6px;
-      width: 6px;
+      height: 5px;
+      width: 5px;
     }
 
     /* Modal Backdrop */
     .modal-backdrop {
-      background: rgba(3, 7, 18, 0.85);
-      backdrop-filter: blur(8px);
+      background: rgba(3, 7, 18, 0.88);
+      backdrop-filter: blur(10px);
     }
 
     /* Printable Resume CSS */
     @media print {
       body * {
-        visibility: hidden;
+        visibility: hidden !important;
       }
       #resume-printable-area, #resume-printable-area * {
-        visibility: visible;
+        visibility: visible !important;
       }
       #resume-printable-area {
         position: absolute;
@@ -142,90 +147,92 @@
         width: 100%;
         background: #ffffff !important;
         color: #000000 !important;
+        font-family: Arial, sans-serif !important;
       }
     }
   </style>
 </head>
 
-<body class="bg-dark-950 text-slate-100 font-sans antialiased overflow-x-hidden selection:bg-cyan-500 selection:text-white">
+<body class="bg-dark-950 text-slate-100 font-sans antialiased overflow-x-hidden selection:bg-emerald-500 selection:text-dark-950">
 
-  <!-- Interactive Background Mesh & Node Canvas -->
+  <!-- Interactive Network Canvas & Glow Tracker -->
   <div id="cursor-blur" class="hidden md:block"></div>
-  <canvas id="data-canvas" class="fixed inset-0 pointer-events-none z-0"></canvas>
+  <canvas id="network-canvas" class="fixed inset-0 pointer-events-none z-0"></canvas>
 
   <!-- Scroll Progress Indicator -->
-  <div id="scroll-progress" class="fixed top-0 left-0 h-[3px] bg-gradient-to-r from-cyan-500 via-emerald-400 to-cyan-400 z-50 transition-all duration-75" style="width: 0%;"></div>
+  <div id="scroll-progress" class="fixed top-0 left-0 h-[3px] bg-gradient-to-r from-emerald-500 via-cyan-400 to-emerald-400 z-50 transition-all duration-75" style="width: 0%;"></div>
 
-  <!-- Audio Synthesizer Controller & Notification Box -->
+  <!-- Notification Toast Box -->
   <div id="toast-box" class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none">
-    <div class="glass-card px-5 py-3 rounded-xl border border-cyan-500/40 text-sm flex items-center gap-3 text-cyan-300 shadow-2xl">
-      <i data-lucide="info" class="w-4 h-4 text-emerald-400"></i>
+    <div class="glass-card px-5 py-3 rounded-xl border border-emerald-500/40 text-xs sm:text-sm flex items-center gap-3 text-emerald-300 shadow-2xl">
+      <i data-lucide="info" class="w-4 h-4 text-cyan-400"></i>
       <span id="toast-message">Notification</span>
     </div>
   </div>
 
-  <!-- NAVIGATION BAR -->
+  <!-- ======================================================= -->
+  <!-- NAVIGATION BAR                                          -->
+  <!-- ======================================================= -->
   <header class="fixed top-0 left-0 w-full z-40 glass-nav transition-all duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       
       <!-- Brand Logo -->
       <a href="#hero" class="flex items-center gap-3 group sound-click">
-        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-500 to-emerald-500 p-[1.5px] shadow-lg shadow-cyan-500/20 group-hover:shadow-cyan-500/40 transition">
-          <div class="w-full h-full bg-dark-900 rounded-[10px] flex items-center justify-center font-mono font-bold text-cyan-400 text-lg">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-500 to-cyan-500 p-[1.5px] shadow-lg shadow-emerald-500/20 group-hover:shadow-emerald-500/40 transition">
+          <div class="w-full h-full bg-dark-950 rounded-[10px] flex items-center justify-center font-mono font-bold text-emerald-400 text-base">
             AP
           </div>
         </div>
         <div>
-          <span class="font-bold tracking-tight text-white group-hover:text-cyan-400 transition flex items-center gap-1.5 text-base">
+          <span class="font-bold tracking-tight text-white group-hover:text-emerald-400 transition flex items-center gap-1.5 text-base">
             Ayush's Portfolio
             <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
           </span>
-          <p class="text-xs text-slate-400 font-mono">Data & BI Analytics</p>
+          <p class="text-[11px] text-slate-400 font-mono">Data & Analytics Engineer</p>
         </div>
       </a>
 
       <!-- Desktop Links -->
-      <nav class="hidden lg:flex items-center gap-7 text-sm font-medium text-slate-300">
-        <a href="#overview" class="hover:text-cyan-400 transition py-1 sound-click">Overview</a>
-        <a href="#terminal" class="hover:text-cyan-400 transition py-1 sound-click flex items-center gap-1.5">
-          <span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span> Live SQL
+      <nav class="hidden lg:flex items-center gap-7 text-xs sm:text-sm font-medium text-slate-300">
+        <a href="#hero" class="hover:text-emerald-400 transition py-1 sound-click">Overview</a>
+        <a href="#terminal" class="hover:text-emerald-400 transition py-1 sound-click flex items-center gap-1.5">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span> Live Simulator
         </a>
-        <a href="#projects" class="hover:text-cyan-400 transition py-1 sound-click">Projects</a>
-        <a href="#skills" class="hover:text-cyan-400 transition py-1 sound-click">Skills</a>
-        <a href="#resume-section" class="hover:text-cyan-400 transition py-1 sound-click text-emerald-400 flex items-center gap-1">
+        <a href="#projects" class="hover:text-emerald-400 transition py-1 sound-click">Projects</a>
+        <a href="#skills" class="hover:text-emerald-400 transition py-1 sound-click">Skills</a>
+        <a href="#resume-section" class="hover:text-emerald-400 transition py-1 sound-click text-cyan-400 flex items-center gap-1">
           <i data-lucide="file-text" class="w-3.5 h-3.5"></i> Resume
         </a>
-        <a href="#experience" class="hover:text-cyan-400 transition py-1 sound-click">Experience</a>
-        <a href="#roi-calculator" class="hover:text-cyan-400 transition py-1 sound-click">ROI Impact</a>
-        <a href="#contact" class="hover:text-cyan-400 transition py-1 sound-click">Contact</a>
+        <a href="#experience" class="hover:text-emerald-400 transition py-1 sound-click">Experience</a>
+        <a href="#roi-calculator" class="hover:text-emerald-400 transition py-1 sound-click">ROI Impact</a>
+        <a href="#contact" class="hover:text-emerald-400 transition py-1 sound-click">Contact</a>
       </nav>
 
       <!-- Right Action Items -->
       <div class="flex items-center gap-2.5">
-        <!-- Admin CMS Modal Button -->
-        <button onclick="openAdminModal()" title="Edit Portfolio (Add Projects, Skills, Update CV)" class="p-2.5 rounded-xl bg-dark-850 border border-cyan-500/40 hover:border-cyan-400 text-cyan-400 hover:text-white transition flex items-center gap-1.5 text-xs font-mono sound-click">
-          <i data-lucide="settings" class="w-4 h-4"></i>
-          <span class="hidden sm:inline">Portfolio Manager</span>
-        </button>
-
-        <!-- View Resume Modal Button -->
+        <!-- View CV Modal Trigger -->
         <button onclick="openResumeModal()" title="View & Download Official CV" class="p-2.5 rounded-xl bg-dark-850 border border-slate-700/60 hover:border-emerald-500/50 text-slate-300 hover:text-emerald-400 transition flex items-center gap-1.5 text-xs font-mono sound-click">
           <i data-lucide="file-check" class="w-4 h-4"></i>
           <span class="hidden md:inline">View CV</span>
         </button>
 
-        <!-- Sound Toggle -->
-        <button id="sound-btn" title="Toggle UI Audio Synthesis" class="p-2.5 rounded-xl bg-dark-850 border border-slate-700/60 hover:border-cyan-500/50 text-slate-300 hover:text-cyan-400 transition">
+        <!-- Sound Synthesizer Toggle -->
+        <button id="sound-btn" title="Toggle UI Sound Synthesizer" class="p-2.5 rounded-xl bg-dark-850 border border-slate-700/60 hover:border-cyan-500/50 text-slate-300 hover:text-cyan-400 transition">
           <i data-lucide="volume-2" id="sound-icon" class="w-4 h-4"></i>
         </button>
 
-        <!-- CTA Hire Me -->
-        <a href="#contact" class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-semibold bg-gradient-to-r from-cyan-500 to-emerald-500 hover:from-cyan-400 hover:to-emerald-400 text-dark-950 transition shadow-lg shadow-cyan-500/20 sound-click">
+        <!-- Discreet Admin Portal Key (For Ayush Only) -->
+        <button onclick="handleAdminEntryClick()" id="admin-lock-btn" title="Admin Portal (Ayush Only)" class="p-2.5 rounded-xl bg-dark-850 border border-slate-700/60 hover:border-amber-500/50 text-slate-400 hover:text-amber-400 transition">
+          <i data-lucide="lock" id="admin-lock-icon" class="w-4 h-4"></i>
+        </button>
+
+        <!-- CTA Direct Contact -->
+        <a href="#contact" class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-semibold bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-400 hover:to-cyan-400 text-dark-950 transition shadow-lg shadow-emerald-500/20 sound-click">
           <i data-lucide="send" class="w-3.5 h-3.5"></i>
-          <span>Hire Me</span>
+          <span>Get in Touch</span>
         </a>
 
-        <!-- Mobile Menu Toggle -->
+        <!-- Mobile Toggle -->
         <button id="mobile-toggle" class="lg:hidden p-2.5 rounded-xl bg-dark-850 border border-slate-700/60 text-slate-300 hover:text-white">
           <i data-lucide="menu" class="w-5 h-5"></i>
         </button>
@@ -233,113 +240,118 @@
 
     </div>
 
-    <!-- Mobile Dropdown Navigation -->
-    <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-800 bg-dark-900/95 px-6 py-6 space-y-4">
-      <a href="#overview" class="block text-slate-300 hover:text-cyan-400 text-base py-1 mobile-link">Overview</a>
-      <a href="#terminal" class="block text-slate-300 hover:text-cyan-400 text-base py-1 mobile-link">Live SQL Terminal</a>
-      <a href="#projects" class="block text-slate-300 hover:text-cyan-400 text-base py-1 mobile-link">Projects Portfolio</a>
-      <a href="#skills" class="block text-slate-300 hover:text-cyan-400 text-base py-1 mobile-link">Skills & Stack</a>
-      <a href="#resume-section" class="block text-emerald-400 font-semibold text-base py-1 mobile-link">Resume & Credentials</a>
-      <a href="#experience" class="block text-slate-300 hover:text-cyan-400 text-base py-1 mobile-link">Experience</a>
-      <a href="#roi-calculator" class="block text-slate-300 hover:text-cyan-400 text-base py-1 mobile-link">ROI Calculator</a>
-      <a href="#contact" class="block text-slate-300 hover:text-cyan-400 text-base py-1 mobile-link">Contact</a>
+    <!-- Mobile Navigation Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-800 bg-dark-950/98 px-6 py-6 space-y-4">
+      <a href="#hero" class="block text-slate-300 hover:text-emerald-400 text-sm py-1 mobile-link">Overview</a>
+      <a href="#terminal" class="block text-slate-300 hover:text-emerald-400 text-sm py-1 mobile-link">Live SQL & Pipeline Simulator</a>
+      <a href="#projects" class="block text-slate-300 hover:text-emerald-400 text-sm py-1 mobile-link">Verified Projects</a>
+      <a href="#skills" class="block text-slate-300 hover:text-emerald-400 text-sm py-1 mobile-link">Technical Stack</a>
+      <a href="#resume-section" class="block text-cyan-400 font-semibold text-sm py-1 mobile-link">Resume & Credentials</a>
+      <a href="#experience" class="block text-slate-300 hover:text-emerald-400 text-sm py-1 mobile-link">Experience</a>
+      <a href="#roi-calculator" class="block text-slate-300 hover:text-emerald-400 text-sm py-1 mobile-link">ROI Calculator</a>
+      <a href="#contact" class="block text-slate-300 hover:text-emerald-400 text-sm py-1 mobile-link">Contact Direct</a>
       <div class="pt-2 flex flex-col gap-2">
         <button onclick="openResumeModal()" class="w-full py-2.5 rounded-xl bg-dark-850 border border-emerald-500/40 text-emerald-400 text-xs font-mono flex items-center justify-center gap-2">
           <i data-lucide="file-text" class="w-4 h-4"></i> View / Download Resume
-        </button>
-        <button onclick="openAdminModal()" class="w-full py-2.5 rounded-xl bg-dark-850 border border-cyan-500/40 text-cyan-400 text-xs font-mono flex items-center justify-center gap-2">
-          <i data-lucide="settings" class="w-4 h-4"></i> Open Portfolio Manager
         </button>
       </div>
     </div>
   </header>
 
+  <!-- ======================================================= -->
+  <!-- HERO SECTION                                            -->
+  <!-- ======================================================= -->
   <main class="relative z-10 pt-24 space-y-32">
 
-    <!-- HERO SECTION -->
-    <section id="hero" class="relative min-h-[90vh] flex items-center justify-center pt-8 pb-16 px-4 sm:px-6 lg:px-8">
+    <section id="hero" class="relative min-h-[88vh] flex items-center justify-center pt-8 pb-16 px-4 sm:px-6 lg:px-8">
       
-      <!-- Ambient Glow Spotlights -->
-      <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[350px] sm:w-[600px] h-[350px] sm:h-[600px] bg-gradient-to-tr from-cyan-500/15 via-emerald-500/10 to-transparent rounded-full blur-3xl pointer-events-none"></div>
+      <!-- Ambient Glow Behind Headline -->
+      <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[340px] sm:w-[650px] h-[340px] sm:h-[650px] bg-gradient-to-tr from-emerald-500/15 via-cyan-500/10 to-transparent rounded-full blur-3xl pointer-events-none"></div>
 
       <div class="max-w-5xl mx-auto text-center space-y-8 relative">
         
-        <!-- Open For Opportunities Badge -->
-        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card border border-emerald-500/30 text-emerald-400 text-xs sm:text-sm font-medium tracking-wide animate-float">
-          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
-          <span>Open for Roles by January 2027 • Delhi NCR / Remote</span>
+        <!-- Updated High-Impact Status Badges (No mention of 'open by january') -->
+        <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card border border-emerald-500/40 text-emerald-300 text-xs sm:text-sm font-medium tracking-wide animate-float shadow-lg shadow-emerald-500/10">
+            <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></span>
+            <span>Actively Exploring Strategic Analytics & Data Engineering Roles</span>
+          </div>
+          <div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-dark-850/80 border border-slate-700/60 text-slate-400 text-xs font-mono">
+            <i data-lucide="map-pin" class="w-3.5 h-3.5 text-cyan-400"></i>
+            <span>Delhi NCR &bull; Hybrid &bull; Remote</span>
+          </div>
         </div>
 
-        <!-- Name & Headline -->
+        <!-- Headline -->
         <div class="space-y-4">
           <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight font-sans">
             Welcome to <br class="sm:hidden">
-            <span class="gradient-text-cyan">Ayush's Portfolio</span>
+            <span class="gradient-text-emerald">Ayush's Portfolio</span>
           </h1>
           <p class="text-xl sm:text-2xl md:text-3xl font-medium text-slate-300 flex items-center justify-center gap-2">
-            I am a <span id="typewriter" class="text-cyan-400 font-mono underline decoration-cyan-500/40 underline-offset-8"></span>
+            I build <span id="typewriter" class="text-emerald-400 font-mono underline decoration-emerald-500/40 underline-offset-8"></span>
           </p>
         </div>
 
         <!-- Bio Summary -->
         <p class="text-slate-400 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed font-light">
-          MCA graduate from <span class="text-slate-200 font-medium">Graphic Era University</span> bridging the divide between 
-          <span class="text-slate-200 font-medium">automated data extraction pipelines</span>, 
-          <span class="text-slate-200 font-medium">enterprise SQL querying</span>, and 
-          <span class="text-slate-200 font-medium">interactive Power BI executive intelligence</span>. Proven track record of boosting onboarding velocity by 25% at Abroad Pathway.
+          MCA graduate from <span class="text-slate-200 font-medium">Graphic Era University</span> (CGPA: 7.46) bridging the divide between 
+          <span class="text-slate-200 font-medium">automated REST API ingestion pipelines</span>, 
+          <span class="text-slate-200 font-medium">enterprise SQL querying (Window Functions & Indexing)</span>, and 
+          <span class="text-slate-200 font-medium">interactive Power BI executive intelligence</span>. Proven track record of boosting client conversion velocity by 25% at Abroad Pathway.
         </p>
 
         <!-- CTA Action Buttons -->
-        <div class="flex flex-wrap items-center justify-center gap-4 pt-4">
-          <button onclick="openResumeModal()" class="px-6 py-3.5 rounded-xl font-semibold text-sm bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-400 hover:to-cyan-400 text-dark-950 transition duration-200 flex items-center gap-2 shadow-xl shadow-emerald-500/20 sound-click">
-            <i data-lucide="file-down" class="w-4 h-4"></i>
-            <span>View & Download CV</span>
+        <div class="flex flex-wrap items-center justify-center gap-4 pt-2">
+          <button onclick="downloadActiveResume()" class="px-6 py-3.5 rounded-xl font-semibold text-xs sm:text-sm bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-400 hover:to-cyan-400 text-dark-950 transition duration-200 flex items-center gap-2 shadow-xl shadow-emerald-500/20 sound-click">
+            <i data-lucide="download" class="w-4 h-4"></i>
+            <span id="hero-download-cv-text">Download Official Resume</span>
           </button>
-          <a href="#projects" class="px-6 py-3.5 rounded-xl font-semibold text-sm glass-card hover:bg-slate-800 text-slate-200 border border-slate-700 hover:border-cyan-400 transition duration-200 flex items-center gap-2 sound-click">
-            <i data-lucide="layers" class="w-4 h-4 text-cyan-400"></i>
-            <span>Flagship Projects</span>
+          <a href="#projects" class="px-6 py-3.5 rounded-xl font-semibold text-xs sm:text-sm glass-card hover:bg-slate-800 text-slate-200 border border-slate-700 hover:border-emerald-400 transition duration-200 flex items-center gap-2 sound-click">
+            <i data-lucide="layers" class="w-4 h-4 text-emerald-400"></i>
+            <span>Verified Flagship Projects</span>
           </a>
-          <button onclick="openAdminModal()" class="px-5 py-3.5 rounded-xl font-mono text-xs glass-card hover:bg-dark-850 text-cyan-300 border border-cyan-500/30 hover:border-cyan-400 transition duration-200 flex items-center gap-2 sound-click">
-            <i data-lucide="edit-3" class="w-3.5 h-3.5"></i>
-            <span>Edit / Add Content</span>
-          </button>
+          <a href="#contact" class="px-6 py-3.5 rounded-xl font-mono text-xs glass-card hover:bg-dark-850 text-cyan-300 border border-cyan-500/30 hover:border-cyan-400 transition duration-200 flex items-center gap-2 sound-click">
+            <i data-lucide="mail" class="w-3.5 h-3.5"></i>
+            <span>Direct Recruiter Inquiry</span>
+          </a>
         </div>
 
         <!-- Quantifiable Impact KPI Metric Cards -->
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 pt-10 text-left">
           
           <div class="glass-card p-5 rounded-2xl relative overflow-hidden group">
-            <div class="text-3xl font-bold font-mono text-cyan-400 counter" data-target="25">0</div>
+            <div class="text-3xl font-bold font-mono text-emerald-400 counter" data-target="25">0</div>
             <div class="text-xs uppercase tracking-wider font-semibold text-slate-400 mt-1">Velocity Lift</div>
             <p class="text-[11px] text-slate-500 mt-1 leading-tight">CRM funnel drop-off optimization at Abroad Pathway</p>
-            <div class="absolute -right-3 -bottom-3 opacity-10 group-hover:opacity-20 transition text-cyan-400">
+            <div class="absolute -right-3 -bottom-3 opacity-10 group-hover:opacity-20 transition text-emerald-400">
               <i data-lucide="trending-up" class="w-16 h-16"></i>
             </div>
           </div>
 
           <div class="glass-card p-5 rounded-2xl relative overflow-hidden group">
-            <div class="text-3xl font-bold font-mono text-emerald-400 counter" data-target="85">0</div>
+            <div class="text-3xl font-bold font-mono text-cyan-400 counter" data-target="85">0</div>
             <div class="text-xs uppercase tracking-wider font-semibold text-slate-400 mt-1">Query Latency Cut</div>
-            <p class="text-[11px] text-slate-500 mt-1 leading-tight">Index optimization via EXPLAIN ANALYZE</p>
-            <div class="absolute -right-3 -bottom-3 opacity-10 group-hover:opacity-20 transition text-emerald-400">
+            <p class="text-[11px] text-slate-500 mt-1 leading-tight">PostgreSQL index tuning via EXPLAIN ANALYZE</p>
+            <div class="absolute -right-3 -bottom-3 opacity-10 group-hover:opacity-20 transition text-cyan-400">
               <i data-lucide="zap" class="w-16 h-16"></i>
             </div>
           </div>
 
           <div class="glass-card p-5 rounded-2xl relative overflow-hidden group">
-            <div class="text-3xl font-bold font-mono text-cyan-400 counter" data-target="5">0</div>
+            <div class="text-3xl font-bold font-mono text-emerald-400 counter" data-target="5">0</div>
             <div class="text-xs uppercase tracking-wider font-semibold text-slate-400 mt-1">Hours / Wk Saved</div>
             <p class="text-[11px] text-slate-500 mt-1 leading-tight">Automated Python REST API & SQL pipeline runs</p>
-            <div class="absolute -right-3 -bottom-3 opacity-10 group-hover:opacity-20 transition text-cyan-400">
+            <div class="absolute -right-3 -bottom-3 opacity-10 group-hover:opacity-20 transition text-emerald-400">
               <i data-lucide="clock" class="w-16 h-16"></i>
             </div>
           </div>
 
           <div class="glass-card p-5 rounded-2xl relative overflow-hidden group">
-            <div class="text-3xl font-bold font-mono text-emerald-400">100K+</div>
+            <div class="text-3xl font-bold font-mono text-cyan-400">100K+</div>
             <div class="text-xs uppercase tracking-wider font-semibold text-slate-400 mt-1">Records Audited</div>
             <p class="text-[11px] text-slate-500 mt-1 leading-tight">Cleaned & analyzed across CRM & mock data lakes</p>
-            <div class="absolute -right-3 -bottom-3 opacity-10 group-hover:opacity-20 transition text-emerald-400">
+            <div class="absolute -right-3 -bottom-3 opacity-10 group-hover:opacity-20 transition text-cyan-400">
               <i data-lucide="database" class="w-16 h-16"></i>
             </div>
           </div>
@@ -349,48 +361,51 @@
       </div>
     </section>
 
-    <!-- SECTION: LIVE SQL TERMINAL & API SIMULATOR -->
+    <!-- ======================================================= -->
+    <!-- INTERACTIVE LIVE SQL & API PIPELINE TERMINAL SIMULATOR  -->
+    <!-- ======================================================= -->
     <section id="terminal" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center space-y-3 mb-10">
-        <span class="text-xs font-mono font-semibold tracking-widest uppercase text-cyan-400 bg-cyan-950/60 px-3 py-1.5 rounded-full border border-cyan-800/40">
+        <span class="text-xs font-mono font-semibold tracking-widest uppercase text-emerald-400 bg-emerald-950/60 px-3 py-1.5 rounded-full border border-emerald-800/40">
           Interactive Proof of Competence
         </span>
-        <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">Live Database & API Terminal</h2>
+        <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">Live Database & API Pipeline Simulator</h2>
         <p class="text-slate-400 text-sm sm:text-base max-w-xl mx-auto">
-          Test my queries in real-time. Click any preset command below to see how I model analytical schemas, calculate window functions, and extract JSON payloads.
+          Test real queries and data engineering scripts live. Click any preset to evaluate analytical schemas, window functions, and JSON extraction logic.
         </p>
       </div>
 
-      <!-- Terminal Window Component -->
+      <!-- Terminal Window Container -->
       <div class="glass-card rounded-2xl border border-slate-700/80 shadow-2xl overflow-hidden">
-        <!-- Terminal Header -->
+        
+        <!-- Terminal Header Bar -->
         <div class="bg-dark-900/90 px-4 py-3 flex items-center justify-between border-b border-slate-800">
           <div class="flex items-center gap-2">
             <span class="w-3 h-3 rounded-full bg-red-500/80 inline-block"></span>
             <span class="w-3 h-3 rounded-full bg-yellow-500/80 inline-block"></span>
             <span class="w-3 h-3 rounded-full bg-green-500/80 inline-block"></span>
             <span class="text-xs font-mono text-slate-400 ml-2 flex items-center gap-1.5">
-              <i data-lucide="terminal" class="w-3.5 h-3.5 text-cyan-400"></i>
+              <i data-lucide="terminal" class="w-3.5 h-3.5 text-emerald-400"></i>
               ayush@postgres-enterprise:~/analytics_engine$
             </span>
           </div>
           <div class="flex items-center gap-3">
             <span class="text-[11px] font-mono bg-dark-800 text-emerald-400 px-2 py-0.5 rounded border border-emerald-500/20">
-              ● Engine Active
+              ● Production Engine Active
             </span>
-            <button id="copy-terminal-btn" class="text-slate-400 hover:text-cyan-400 text-xs transition flex items-center gap-1" title="Copy Current Query">
+            <button onclick="copyCurrentTerminalCode()" class="text-slate-400 hover:text-emerald-400 text-xs transition flex items-center gap-1" title="Copy Current Code">
               <i data-lucide="copy" class="w-3.5 h-3.5"></i>
             </button>
           </div>
         </div>
 
         <!-- Terminal Query Preset Buttons -->
-        <div class="bg-dark-950/60 p-3 border-b border-slate-800/80 flex flex-wrap gap-2 text-xs font-mono">
-          <button onclick="runTerminalQuery('window_sql')" class="px-3 py-1.5 rounded-lg bg-dark-850 hover:bg-slate-800 text-cyan-300 border border-slate-700/80 hover:border-cyan-500/50 transition flex items-center gap-1.5 sound-click">
+        <div class="bg-dark-950/70 p-3 border-b border-slate-800/80 flex flex-wrap gap-2 text-xs font-mono">
+          <button onclick="runTerminalQuery('window_sql')" class="px-3 py-1.5 rounded-lg bg-dark-850 hover:bg-slate-800 text-emerald-300 border border-slate-700/80 hover:border-emerald-500/50 transition flex items-center gap-1.5 sound-click">
             <i data-lucide="database" class="w-3.5 h-3.5"></i>
             Run SQL: Window Function (Retention)
           </button>
-          <button onclick="runTerminalQuery('api_pipeline')" class="px-3 py-1.5 rounded-lg bg-dark-850 hover:bg-slate-800 text-emerald-300 border border-slate-700/80 hover:border-emerald-500/50 transition flex items-center gap-1.5 sound-click">
+          <button onclick="runTerminalQuery('api_pipeline')" class="px-3 py-1.5 rounded-lg bg-dark-850 hover:bg-slate-800 text-cyan-300 border border-slate-700/80 hover:border-cyan-500/50 transition flex items-center gap-1.5 sound-click">
             <i data-lucide="cpu" class="w-3.5 h-3.5"></i>
             Trigger API: ETL Data Pipeline
           </button>
@@ -400,27 +415,16 @@
           </button>
           <button onclick="runTerminalQuery('dax_measure')" class="px-3 py-1.5 rounded-lg bg-dark-850 hover:bg-slate-800 text-yellow-300 border border-slate-700/80 hover:border-yellow-500/50 transition flex items-center gap-1.5 sound-click">
             <i data-lucide="bar-chart-2" class="w-3.5 h-3.5"></i>
-            Inspect: Power BI DAX Calculation
+            Inspect: Power BI DAX Measure
           </button>
         </div>
 
         <!-- Code & Output Canvas -->
         <div class="p-6 font-mono text-sm space-y-4">
-          <!-- Command Line -->
+          <!-- Command Line Code Display -->
           <div>
-            <div class="text-xs text-slate-500 mb-1">-- EXECUTING QUERY:</div>
-            <pre id="terminal-code" class="text-cyan-400 bg-dark-900/90 p-4 rounded-xl border border-slate-800/80 overflow-x-auto custom-scroll text-xs leading-relaxed">
-SELECT 
-    client_id,
-    funnel_stage,
-    conversion_date,
-    ROW_NUMBER() OVER(PARTITION BY region ORDER BY conversion_date DESC) as rank_in_geo,
-    LAG(conversion_date, 1) OVER(PARTITION BY client_id ORDER BY conversion_date) as prev_touchpoint,
-    ROUND((amount - AVG(amount) OVER(PARTITION BY service_type))::numeric, 2) as variance_from_benchmark
-FROM abroad_crm_leads
-WHERE status = 'Active_Qualified'
-LIMIT 4;
-            </pre>
+            <div class="text-xs text-slate-500 mb-1">-- ACTIVE EXECUTION QUERY / SCRIPT:</div>
+            <pre id="terminal-code" class="text-emerald-400 bg-dark-900/90 p-4 rounded-xl border border-slate-800/80 overflow-x-auto custom-scroll text-xs leading-relaxed"></pre>
           </div>
 
           <!-- Execution Stats Ribbon -->
@@ -428,25 +432,25 @@ LIMIT 4;
             <div class="flex items-center gap-4">
               <span class="flex items-center gap-1"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-400"></i> Status: <b class="text-slate-200">200 OK</b></span>
               <span>Execution Time: <b class="text-emerald-400" id="term-speed">12.4 ms</b></span>
-              <span>Rows Returned: <b class="text-cyan-400" id="term-rows">4 records</b></span>
+              <span>Records Affected: <b class="text-cyan-400" id="term-rows">4 records</b></span>
             </div>
             <div class="text-slate-500 text-[11px] font-sans">
-              PostgreSQL 15.2 • Partition Indexed
+              PostgreSQL 16 &bull; B-Tree Index Optimized
             </div>
           </div>
 
           <!-- Tabular Output Display -->
           <div class="overflow-x-auto custom-scroll">
-            <div class="text-xs text-slate-500 mb-1">-- QUERY OUTPUT STREAM:</div>
-            <div id="terminal-table-container">
-              <!-- Rendered via JS -->
-            </div>
+            <div class="text-xs text-slate-500 mb-1">-- TABULAR OUTPUT STREAM:</div>
+            <div id="terminal-table-container"></div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SECTION: FLAGSHIP PROJECTS SHOWCASE -->
+    <!-- ======================================================= -->
+    <!-- FLAGSHIP PROJECTS SHOWCASE                              -->
+    <!-- ======================================================= -->
     <section id="projects" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
         <div class="space-y-3">
@@ -454,62 +458,58 @@ LIMIT 4;
             <span class="text-xs font-mono font-semibold tracking-widest uppercase text-emerald-400 bg-emerald-950/60 px-3 py-1.5 rounded-full border border-emerald-800/40">
               Verified Proof of Work
             </span>
-            <button onclick="openAdminModal('project-tab')" class="text-xs text-cyan-400 hover:underline font-mono flex items-center gap-1">
-              <i data-lucide="plus-circle" class="w-3.5 h-3.5"></i> Add New Project
-            </button>
           </div>
           <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">Enterprise & Applied Analytics Projects</h2>
           <p class="text-slate-400 text-sm sm:text-base max-w-xl">
-            Real systems deployed with production architecture, business metrics, and quantifiable impact. Managed dynamically via portfolio storage.
+            Production architectures, real-world metric impact, and reproducible code repositories.
           </p>
         </div>
 
         <!-- Filter Tags -->
         <div class="flex flex-wrap gap-2 text-xs font-medium" id="project-filters">
-          <button onclick="filterProjects('all')" class="proj-filter-btn px-4 py-2 rounded-xl bg-cyan-500 text-dark-950 font-semibold transition sound-click" data-category="all">All Projects</button>
+          <button onclick="filterProjects('all')" class="proj-filter-btn px-4 py-2 rounded-xl bg-emerald-500 text-dark-950 font-semibold transition sound-click" data-category="all">All Projects</button>
           <button onclick="filterProjects('sql')" class="proj-filter-btn px-4 py-2 rounded-xl glass-card text-slate-300 hover:text-white transition sound-click" data-category="sql">SQL & Dashboards</button>
           <button onclick="filterProjects('pipeline')" class="proj-filter-btn px-4 py-2 rounded-xl glass-card text-slate-300 hover:text-white transition sound-click" data-category="pipeline">Data Pipelines</button>
           <button onclick="filterProjects('aiml')" class="proj-filter-btn px-4 py-2 rounded-xl glass-card text-slate-300 hover:text-white transition sound-click" data-category="aiml">AI & ML Agents</button>
         </div>
       </div>
 
-      <!-- Project Cards Grid (Populated dynamically via JS) -->
+      <!-- Project Cards Grid -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="projects-container">
-        <!-- Rendered from dynamic storage -->
+        <!-- Dynamically rendered via JS -->
       </div>
     </section>
 
-    <!-- SECTION: SKILLS & TECHNICAL STACK -->
+    <!-- ======================================================= -->
+    <!-- TECHNICAL SKILLS MATRIX                                 -->
+    <!-- ======================================================= -->
     <section id="skills" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center space-y-3 mb-12">
-        <div class="flex items-center justify-center gap-2">
-          <span class="text-xs font-mono font-semibold tracking-widest uppercase text-cyan-400 bg-cyan-950/60 px-3 py-1.5 rounded-full border border-cyan-800/40">
-            Core Competencies
-          </span>
-          <button onclick="openAdminModal('skill-tab')" class="text-xs text-cyan-400 hover:underline font-mono flex items-center gap-1">
-            <i data-lucide="plus-circle" class="w-3.5 h-3.5"></i> Add Custom Skill
-          </button>
-        </div>
+        <span class="text-xs font-mono font-semibold tracking-widest uppercase text-cyan-400 bg-cyan-950/60 px-3 py-1.5 rounded-full border border-cyan-800/40">
+          Core Competencies
+        </span>
         <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">Technical Arsenal & Stack</h2>
         <p class="text-slate-400 text-sm sm:text-base max-w-xl mx-auto">
-          A disciplined, production-tested toolkit honed across live CRM client data, graduate MCA research, and end-to-end data pipelines.
+          A disciplined, production-tested toolkit honed across live corporate CRM pipelines, graduate MCA research, and automated data architectures.
         </p>
       </div>
 
-      <!-- Skills Container rendered via JS -->
+      <!-- Skills Grid Container -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="skills-container">
-        <!-- Dynamic Skills Grid -->
+        <!-- Rendered via JS -->
       </div>
     </section>
 
-    <!-- SECTION: DEDICATED RESUME & CREDENTIALS SHOWCASE -->
+    <!-- ======================================================= -->
+    <!-- RESUME & CREDENTIALS SHOWCASE                           -->
+    <!-- ======================================================= -->
     <section id="resume-section" class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="glass-card rounded-3xl p-8 sm:p-10 border border-emerald-500/30 relative overflow-hidden">
         
         <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 pb-6 border-b border-slate-800">
           <div>
             <span class="text-xs font-mono font-semibold tracking-widest uppercase text-emerald-400 bg-emerald-950/60 px-3 py-1.5 rounded-full border border-emerald-800/40">
-              Verified Curriculum Vitae
+              Official Curriculum Vitae
             </span>
             <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight mt-2">Resume & Official Credentials</h2>
             <p class="text-slate-400 text-xs sm:text-sm mt-1">
@@ -522,11 +522,8 @@ LIMIT 4;
               <i data-lucide="download" class="w-4 h-4"></i>
               <span id="btn-download-label">Download PDF Resume</span>
             </button>
-            <button onclick="openResumeModal()" class="px-4 py-2.5 rounded-xl bg-dark-850 border border-slate-700 hover:border-cyan-400 text-slate-300 hover:text-white text-xs font-mono flex items-center gap-2 transition sound-click">
+            <button onclick="openResumeModal()" class="px-4 py-2.5 rounded-xl bg-dark-850 border border-slate-700 hover:border-emerald-400 text-slate-300 hover:text-white text-xs font-mono flex items-center gap-2 transition sound-click">
               <i data-lucide="maximize-2" class="w-4 h-4"></i> Fullscreen Preview
-            </button>
-            <button onclick="openAdminModal('cv-tab')" class="px-3 py-2.5 rounded-xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/20 text-xs font-mono flex items-center gap-1.5 transition sound-click" title="Upload an updated resume file">
-              <i data-lucide="upload-cloud" class="w-4 h-4"></i> Update CV
             </button>
           </div>
         </div>
@@ -535,10 +532,10 @@ LIMIT 4;
         <div class="mt-6 bg-dark-900/80 rounded-2xl p-6 border border-slate-800 space-y-5">
           <div class="flex flex-wrap items-center justify-between gap-2 text-xs font-mono text-slate-400">
             <div>
-              <span class="text-white font-bold text-sm">Kumar Ayush Ambstha</span> • MCA (Graphic Era Deemed to be University)
+              <span class="text-white font-bold text-sm">Kumar Ayush Ambstha</span> &bull; MCA (Graphic Era Deemed to be University)
             </div>
             <div class="text-emerald-400">
-              Active CV Version: <span id="cv-version-text" class="text-slate-300">Default Verified ATS Document</span>
+              Verified ATS Document &bull; Delhi NCR, India
             </div>
           </div>
 
@@ -546,17 +543,17 @@ LIMIT 4;
             <div class="p-3 bg-dark-850 rounded-xl border border-slate-800">
               <span class="text-slate-500 block text-[10px]">CURRENT ROLE:</span>
               <span class="text-slate-200 font-semibold">Client Data Operations Manager</span>
-              <span class="text-cyan-400 block text-[11px]">Abroad Pathway</span>
+              <span class="text-emerald-400 block text-[11px]">Abroad Pathway Immigration</span>
             </div>
             <div class="p-3 bg-dark-850 rounded-xl border border-slate-800">
               <span class="text-slate-500 block text-[10px]">PREVIOUS INTERNSHIP:</span>
               <span class="text-slate-200 font-semibold">AI/ML & Data Intern</span>
-              <span class="text-emerald-400 block text-[11px]">Innovexis Pvt. Ltd.</span>
+              <span class="text-cyan-400 block text-[11px]">Innovexis Pvt. Ltd.</span>
             </div>
             <div class="p-3 bg-dark-850 rounded-xl border border-slate-800">
               <span class="text-slate-500 block text-[10px]">EDUCATION:</span>
               <span class="text-slate-200 font-semibold">Master of Computer Applications</span>
-              <span class="text-yellow-400 block text-[11px]">CGPA: 7.46 / 10</span>
+              <span class="text-yellow-400 block text-[11px]">CGPA: 7.46 / 10 (2026)</span>
             </div>
           </div>
         </div>
@@ -564,7 +561,9 @@ LIMIT 4;
       </div>
     </section>
 
-    <!-- SECTION: EXPERIENCE & CAREER TIMELINE -->
+    <!-- ======================================================= -->
+    <!-- CAREER TIMELINE & EXPERIENCE                            -->
+    <!-- ======================================================= -->
     <section id="experience" class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center space-y-3 mb-16">
         <span class="text-xs font-mono font-semibold tracking-widest uppercase text-emerald-400 bg-emerald-950/60 px-3 py-1.5 rounded-full border border-emerald-800/40">
@@ -581,19 +580,19 @@ LIMIT 4;
         
         <!-- Experience 1: Abroad Pathway -->
         <div class="relative pl-8 group">
-          <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-dark-950 border-2 border-cyan-400 group-hover:scale-125 transition"></div>
+          <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-dark-950 border-2 border-emerald-400 group-hover:scale-125 transition"></div>
           
-          <div class="sm:absolute sm:-left-36 sm:top-1 text-xs font-mono text-cyan-400 font-semibold mb-1 sm:mb-0">
+          <div class="sm:absolute sm:-left-36 sm:top-1 text-xs font-mono text-emerald-400 font-semibold mb-1 sm:mb-0">
             Aug 2026 – Present
           </div>
 
           <div class="glass-card p-6 rounded-2xl space-y-3">
             <div class="flex flex-wrap items-center justify-between gap-2">
-              <h3 class="text-lg font-bold text-white group-hover:text-cyan-400 transition">
+              <h3 class="text-lg font-bold text-white group-hover:text-emerald-400 transition">
                 Client Relationship & Data Operations Manager
               </h3>
               <span class="text-xs px-2.5 py-1 rounded-full bg-dark-800 text-slate-300 font-mono">
-                Abroad Pathway Immigration • Delhi NCR
+                Abroad Pathway Immigration &bull; Delhi NCR
               </span>
             </div>
             <ul class="text-xs sm:text-sm text-slate-400 space-y-2 list-disc list-inside">
@@ -607,23 +606,23 @@ LIMIT 4;
 
         <!-- Experience 2: Innovexis AI/ML Intern -->
         <div class="relative pl-8 group">
-          <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-dark-950 border-2 border-emerald-400 group-hover:scale-125 transition"></div>
+          <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-dark-950 border-2 border-cyan-400 group-hover:scale-125 transition"></div>
           
-          <div class="sm:absolute sm:-left-36 sm:top-1 text-xs font-mono text-emerald-400 font-semibold mb-1 sm:mb-0">
+          <div class="sm:absolute sm:-left-36 sm:top-1 text-xs font-mono text-cyan-400 font-semibold mb-1 sm:mb-0">
             Feb 2026 – Aug 2026
           </div>
 
           <div class="glass-card p-6 rounded-2xl space-y-3">
             <div class="flex flex-wrap items-center justify-between gap-2">
-              <h3 class="text-lg font-bold text-white group-hover:text-emerald-400 transition">
+              <h3 class="text-lg font-bold text-white group-hover:text-cyan-400 transition">
                 AI/ML & Data Intern
               </h3>
               <span class="text-xs px-2.5 py-1 rounded-full bg-dark-800 text-slate-300 font-mono">
-                Innovexis Pvt. Ltd. • Mumbai / Hybrid
+                Innovexis Pvt. Ltd. &bull; Hybrid
               </span>
             </div>
             <ul class="text-xs sm:text-sm text-slate-400 space-y-2 list-disc list-inside">
-              <li>Conducted extensive exploratory data analysis (EDA), data imputation, and statistical outlier treatment across structured tabular datasets with Python (Pandas, NumPy).</li>
+              <li>Conducted exploratory data analysis (EDA), data imputation, and statistical outlier treatment across structured tabular datasets with Python (Pandas, NumPy).</li>
               <li>Engineered feature transformation pipelines (scaling, one-hot encoding, target binning) to prepare high-integrity training and cross-validation datasets.</li>
               <li>Benchmarked supervised classification models against quantitative business evaluation metrics (Precision, Recall, F1-Score, ROC-AUC) to reduce false-positive rates.</li>
             </ul>
@@ -635,7 +634,7 @@ LIMIT 4;
           <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-dark-950 border-2 border-purple-400 group-hover:scale-125 transition"></div>
           
           <div class="sm:absolute sm:-left-36 sm:top-1 text-xs font-mono text-purple-400 font-semibold mb-1 sm:mb-0">
-            2026 • Virtual
+            2026 &bull; Remote
           </div>
 
           <div class="glass-card p-6 rounded-2xl space-y-3">
@@ -653,7 +652,7 @@ LIMIT 4;
           </div>
         </div>
 
-        <!-- Education Node: MCA -->
+        <!-- Education: MCA -->
         <div class="relative pl-8 group">
           <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-dark-950 border-2 border-yellow-400 group-hover:scale-125 transition"></div>
           
@@ -667,7 +666,7 @@ LIMIT 4;
               <span class="text-xs px-2.5 py-1 rounded-full bg-dark-800 text-yellow-300 font-mono">CGPA: 7.46 / 10</span>
             </div>
             <p class="text-xs sm:text-sm text-slate-400">
-              Graphic Era Deemed to be University, Dehradun • Focus on DBMS, Data Structures, Advanced Algorithms, and Business Intelligence Reporting.
+              Graphic Era Deemed to be University, Dehradun &bull; Focus on DBMS, Data Structures, Advanced Relational Modeling, and Business Intelligence Reporting.
             </p>
           </div>
         </div>
@@ -675,12 +674,14 @@ LIMIT 4;
       </div>
     </section>
 
-    <!-- SECTION: INTERACTIVE ROI & AUTOMATION IMPACT CALCULATOR -->
+    <!-- ======================================================= -->
+    <!-- INTERACTIVE ROI & AUTOMATION IMPACT CALCULATOR          -->
+    <!-- ======================================================= -->
     <section id="roi-calculator" class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="glass-card rounded-3xl p-8 border border-cyan-500/30 relative overflow-hidden">
+      <div class="glass-card rounded-3xl p-8 border border-emerald-500/30 relative overflow-hidden">
         
         <div class="space-y-3 mb-8">
-          <span class="text-xs font-mono font-semibold tracking-widest uppercase text-cyan-400 bg-cyan-950/60 px-3 py-1.5 rounded-full border border-cyan-800/40">
+          <span class="text-xs font-mono font-semibold tracking-widest uppercase text-emerald-400 bg-emerald-950/60 px-3 py-1.5 rounded-full border border-emerald-800/40">
             Recruiter Interactive Tool
           </span>
           <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">ROI & Automation Impact Calculator</h2>
@@ -696,25 +697,25 @@ LIMIT 4;
             <div>
               <div class="flex justify-between text-xs font-mono text-slate-300 mb-2">
                 <span>Manual Reporting Hours Spent / Week:</span>
-                <span id="hours-display" class="text-cyan-400 font-bold text-sm">15 hrs</span>
+                <span id="hours-display" class="text-emerald-400 font-bold text-sm">15 hrs</span>
               </div>
-              <input type="range" id="hours-slider" min="5" max="40" value="15" class="w-full h-2 bg-dark-900 rounded-lg appearance-none cursor-pointer accent-cyan-400">
+              <input type="range" id="hours-slider" min="5" max="40" value="15" class="w-full h-2 bg-dark-900 rounded-lg appearance-none cursor-pointer accent-emerald-400">
             </div>
 
             <div>
               <div class="flex justify-between text-xs font-mono text-slate-300 mb-2">
                 <span>Number of Analysts / Team Members:</span>
-                <span id="team-display" class="text-cyan-400 font-bold text-sm">3 members</span>
+                <span id="team-display" class="text-emerald-400 font-bold text-sm">3 members</span>
               </div>
-              <input type="range" id="team-slider" min="1" max="10" value="3" class="w-full h-2 bg-dark-900 rounded-lg appearance-none cursor-pointer accent-cyan-400">
+              <input type="range" id="team-slider" min="1" max="10" value="3" class="w-full h-2 bg-dark-900 rounded-lg appearance-none cursor-pointer accent-emerald-400">
             </div>
 
             <div>
               <div class="flex justify-between text-xs font-mono text-slate-300 mb-2">
-                <span>Average Hourly Operational Cost (₹):</span>
-                <span id="cost-display" class="text-cyan-400 font-bold text-sm">₹800 / hr</span>
+                <span>Average Hourly Operational Cost (INR):</span>
+                <span id="cost-display" class="text-emerald-400 font-bold text-sm">&#8377;800 / hr</span>
               </div>
-              <input type="range" id="cost-slider" min="400" max="2500" step="100" value="800" class="w-full h-2 bg-dark-900 rounded-lg appearance-none cursor-pointer accent-cyan-400">
+              <input type="range" id="cost-slider" min="400" max="2500" step="100" value="800" class="w-full h-2 bg-dark-900 rounded-lg appearance-none cursor-pointer accent-emerald-400">
             </div>
           </div>
 
@@ -724,7 +725,7 @@ LIMIT 4;
             
             <div class="space-y-1">
               <div class="text-3xl sm:text-4xl font-extrabold font-mono text-emerald-400" id="annual-savings">
-                ₹17,28,000
+                &#8377;17,28,000
               </div>
               <p class="text-[11px] text-slate-400">Saved in operational team hours every year</p>
             </div>
@@ -747,7 +748,9 @@ LIMIT 4;
       </div>
     </section>
 
-    <!-- SECTION: CONTACT & CONNECT -->
+    <!-- ======================================================= -->
+    <!-- CONTACT & DIRECT INBOX INQUIRY SECTION                  -->
+    <!-- ======================================================= -->
     <section id="contact" class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
       <div class="glass-card rounded-3xl p-8 sm:p-12 border border-slate-700/80 shadow-2xl relative overflow-hidden">
         
@@ -762,19 +765,19 @@ LIMIT 4;
               Let's Build Data Solutions That Drive Growth.
             </h2>
             <p class="text-slate-400 text-sm leading-relaxed">
-              I am actively interviewing for <b class="text-slate-200">Junior Data Analyst</b>, <b class="text-slate-200">BI Analyst</b>, and <b class="text-slate-200">Analytics Engineer</b> roles in Delhi NCR or remote setups, with immediate joining readiness for January 2027.
+              I am actively interviewing for <b class="text-slate-200">Data Analyst</b>, <b class="text-slate-200">BI Analyst</b>, and <b class="text-slate-200">Analytics Engineer</b> roles. Send a note and it will deliver directly to my personal mailbox.
             </p>
 
             <div class="space-y-4 pt-2 text-xs sm:text-sm font-mono text-slate-300">
-              <a href="mailto:ayushkumar.281299@gmail.com" class="flex items-center gap-3 hover:text-cyan-400 transition group sound-click">
-                <div class="w-9 h-9 rounded-xl bg-dark-900 border border-slate-800 flex items-center justify-center text-cyan-400 group-hover:border-cyan-500">
+              <a href="mailto:ayushkumar.281299@gmail.com" class="flex items-center gap-3 hover:text-emerald-400 transition group sound-click">
+                <div class="w-9 h-9 rounded-xl bg-dark-900 border border-slate-800 flex items-center justify-center text-emerald-400 group-hover:border-emerald-500">
                   <i data-lucide="mail" class="w-4 h-4"></i>
                 </div>
                 <span>ayushkumar.281299@gmail.com</span>
               </a>
 
-              <a href="tel:+919102853155" class="flex items-center gap-3 hover:text-cyan-400 transition group sound-click">
-                <div class="w-9 h-9 rounded-xl bg-dark-900 border border-slate-800 flex items-center justify-center text-emerald-400 group-hover:border-emerald-500">
+              <a href="tel:+919102853155" class="flex items-center gap-3 hover:text-emerald-400 transition group sound-click">
+                <div class="w-9 h-9 rounded-xl bg-dark-900 border border-slate-800 flex items-center justify-center text-cyan-400 group-hover:border-cyan-500">
                   <i data-lucide="phone" class="w-4 h-4"></i>
                 </div>
                 <span>+91 9102853155</span>
@@ -784,13 +787,13 @@ LIMIT 4;
                 <div class="w-9 h-9 rounded-xl bg-dark-900 border border-slate-800 flex items-center justify-center text-yellow-400">
                   <i data-lucide="map-pin" class="w-4 h-4"></i>
                 </div>
-                <span>Delhi, India (Ready to Relocate / Hybrid / Remote)</span>
+                <span>Delhi NCR, India (Available for Immediate Joining)</span>
               </div>
             </div>
 
-            <!-- Social Links & Resume Trigger -->
+            <!-- Social Links -->
             <div class="flex items-center gap-3 pt-4">
-              <a href="https://linkedin.com/in/ayush-ambstha" target="_blank" class="px-3.5 py-2 rounded-xl bg-dark-900 border border-slate-800 text-slate-300 hover:text-cyan-400 hover:border-cyan-500 transition text-xs font-mono flex items-center gap-2 sound-click">
+              <a href="https://linkedin.com/in/ayush-ambstha" target="_blank" class="px-3.5 py-2 rounded-xl bg-dark-900 border border-slate-800 text-slate-300 hover:text-emerald-400 hover:border-emerald-500 transition text-xs font-mono flex items-center gap-2 sound-click">
                 <i data-lucide="linkedin" class="w-3.5 h-3.5"></i>
                 <span>LinkedIn</span>
               </a>
@@ -800,9 +803,9 @@ LIMIT 4;
                 <span>GitHub</span>
               </a>
 
-              <button onclick="copyResumeLink()" class="px-3.5 py-2 rounded-xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 hover:bg-cyan-500/20 transition text-xs font-mono flex items-center gap-1.5 sound-click">
+              <button onclick="copyContactCard()" class="px-3.5 py-2 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 hover:bg-emerald-500/20 transition text-xs font-mono flex items-center gap-1.5 sound-click">
                 <i data-lucide="copy" class="w-3.5 h-3.5"></i>
-                <span>Copy Info</span>
+                <span>Copy Details</span>
               </button>
             </div>
           </div>
@@ -811,23 +814,32 @@ LIMIT 4;
           <form id="contact-form" onsubmit="handleContactSubmit(event)" class="space-y-4 bg-dark-900/60 p-6 rounded-2xl border border-slate-800">
             <div>
               <label class="block text-xs font-mono text-slate-400 mb-1.5">Your Name / Recruiter Name</label>
-              <input type="text" id="sender-name" required placeholder="e.g. Priya Sharma" class="w-full px-4 py-2.5 rounded-xl bg-dark-850 border border-slate-800 focus:border-cyan-400 focus:outline-none text-slate-200 text-sm">
+              <input type="text" name="name" id="sender-name" required placeholder="e.g. Priya Sharma" class="w-full px-4 py-2.5 rounded-xl bg-dark-850 border border-slate-800 focus:border-emerald-400 focus:outline-none text-slate-200 text-sm">
             </div>
 
             <div>
-              <label class="block text-xs font-mono text-slate-400 mb-1.5">Corporate Email</label>
-              <input type="email" id="sender-email" required placeholder="priya@company.com" class="w-full px-4 py-2.5 rounded-xl bg-dark-850 border border-slate-800 focus:border-cyan-400 focus:outline-none text-slate-200 text-sm">
+              <label class="block text-xs font-mono text-slate-400 mb-1.5">Work Email</label>
+              <input type="email" name="email" id="sender-email" required placeholder="priya@company.com" class="w-full px-4 py-2.5 rounded-xl bg-dark-850 border border-slate-800 focus:border-emerald-400 focus:outline-none text-slate-200 text-sm">
             </div>
 
             <div>
-              <label class="block text-xs font-mono text-slate-400 mb-1.5">Role / Opportunity Details</label>
-              <textarea id="sender-msg" rows="3" required placeholder="Hi Ayush, we have an opening for a Data Analyst in Delhi / Remote..." class="w-full px-4 py-2.5 rounded-xl bg-dark-850 border border-slate-800 focus:border-cyan-400 focus:outline-none text-slate-200 text-sm"></textarea>
+              <label class="block text-xs font-mono text-slate-400 mb-1.5">Subject / Company</label>
+              <input type="text" name="subject" id="sender-subject" required placeholder="Opportunity: Senior Data Analyst Role" class="w-full px-4 py-2.5 rounded-xl bg-dark-850 border border-slate-800 focus:border-emerald-400 focus:outline-none text-slate-200 text-sm">
             </div>
 
-            <button type="submit" class="w-full py-3.5 rounded-xl font-semibold text-xs sm:text-sm bg-gradient-to-r from-cyan-500 to-emerald-500 hover:from-cyan-400 hover:to-emerald-400 text-dark-950 transition flex items-center justify-center gap-2 shadow-lg shadow-cyan-500/20 sound-click">
+            <div>
+              <label class="block text-xs font-mono text-slate-400 mb-1.5">Opportunity Details</label>
+              <textarea name="message" id="sender-msg" rows="3" required placeholder="Hi Ayush, we have an opening for an Analytics Engineer in Delhi / Remote..." class="w-full px-4 py-2.5 rounded-xl bg-dark-850 border border-slate-800 focus:border-emerald-400 focus:outline-none text-slate-200 text-sm"></textarea>
+            </div>
+
+            <button type="submit" id="contact-submit-btn" class="w-full py-3.5 rounded-xl font-semibold text-xs sm:text-sm bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-400 hover:to-cyan-400 text-dark-950 transition flex items-center justify-center gap-2 shadow-lg shadow-emerald-500/20 sound-click">
               <i data-lucide="send" class="w-4 h-4"></i>
-              <span>Send Direct Inquiry</span>
+              <span id="contact-btn-text">Send Direct Inquiry to Ayush</span>
             </button>
+            
+            <p class="text-[11px] font-mono text-center text-slate-500 pt-1">
+              Delivers instantly to <span class="text-emerald-400">ayushkumar.281299@gmail.com</span>
+            </p>
           </form>
 
         </div>
@@ -838,7 +850,7 @@ LIMIT 4;
   </main>
 
   <!-- ======================================================= -->
-  <!-- MODAL 1: RESUME VIEWER & PRINTABLE MODAL               -->
+  <!-- RESUME VIEWER & PRINTABLE MODAL                         -->
   <!-- ======================================================= -->
   <div id="resume-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-3 sm:p-6 modal-backdrop">
     <div class="glass-card bg-dark-900 border border-slate-700 w-full max-w-4xl max-h-[92vh] rounded-3xl flex flex-col shadow-2xl overflow-hidden animate-in fade-in zoom-in duration-200">
@@ -851,12 +863,12 @@ LIMIT 4;
           </div>
           <div>
             <h3 class="text-sm font-bold text-white">Kumar Ayush Ambstha - Official Resume</h3>
-            <p class="text-[11px] text-slate-400 font-mono">ATS-Compliant Document • Delhi, India</p>
+            <p class="text-[11px] text-slate-400 font-mono">ATS-Compliant Document &bull; Delhi NCR, India</p>
           </div>
         </div>
         <div class="flex items-center gap-2">
           <button onclick="downloadActiveResume()" class="px-3 py-1.5 rounded-lg bg-gradient-to-r from-emerald-500 to-cyan-500 text-dark-950 text-xs font-semibold flex items-center gap-1.5 hover:opacity-90 transition sound-click">
-            <i data-lucide="download" class="w-3.5 h-3.5"></i> Download
+            <i data-lucide="download" class="w-3.5 h-3.5"></i> Download PDF
           </button>
           <button onclick="printResume()" class="p-2 rounded-lg bg-dark-850 border border-slate-700 text-slate-300 hover:text-white transition sound-click" title="Print Resume">
             <i data-lucide="printer" class="w-4 h-4"></i>
@@ -873,9 +885,9 @@ LIMIT 4;
         <!-- Header -->
         <div class="text-center pb-4 border-b border-slate-700">
           <h1 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">KUMAR AYUSH AMBSTHA</h1>
-          <p class="text-cyan-400 font-mono font-semibold text-xs mt-1">Data Analyst • Business Intelligence (BI) Analyst • Analytics Engineer</p>
+          <p class="text-emerald-400 font-mono font-semibold text-xs mt-1">Data Analyst &bull; Business Intelligence (BI) Analyst &bull; Analytics Engineer</p>
           <p class="text-slate-400 text-xs mt-1">
-            Delhi, India • +91-9102853155 • ayushkumar.281299@gmail.com • linkedin.com/in/ayush-ambstha • github.com/ayush25-28
+            Delhi, India &bull; +91-9102853155 &bull; ayushkumar.281299@gmail.com &bull; linkedin.com/in/ayush-ambstha &bull; github.com/ayush25-28
           </p>
         </div>
 
@@ -905,19 +917,19 @@ LIMIT 4;
           <div class="space-y-4">
             <div>
               <div class="flex justify-between font-bold text-white text-xs">
-                <span>Abroad Pathway Immigration • Client Relationship & Data Operations Manager</span>
+                <span>Abroad Pathway Immigration &bull; Client Relationship & Data Operations Manager</span>
                 <span class="text-slate-400 font-mono">Aug 2026 – Present | Delhi NCR</span>
               </div>
               <ul class="list-disc list-inside text-xs text-slate-300 space-y-1 mt-1">
                 <li>Manage end-to-end CRM lifecycle data and conversion tracking across 50+ enterprise accounts, enforcing strict data auditing protocols.</li>
                 <li>Conducted funnel drop-off analysis using Advanced Excel and SQL, accelerating onboarding conversion velocity by 25%.</li>
-                <li>Constructed weekly and monthly MIS KPI dashboards, saving 5 hours of manual reporting every week.</li>
+                <li>Constructed weekly and monthly MIS KPI dashboards, saving ~5 hours of manual reporting every week.</li>
               </ul>
             </div>
 
             <div>
               <div class="flex justify-between font-bold text-white text-xs">
-                <span>Innovexis Pvt. Ltd. • AI/ML & Data Intern</span>
+                <span>Innovexis Pvt. Ltd. &bull; AI/ML & Data Intern</span>
                 <span class="text-slate-400 font-mono">Feb 2026 – Aug 2026 | Mumbai/Hybrid</span>
               </div>
               <ul class="list-disc list-inside text-xs text-slate-300 space-y-1 mt-1">
@@ -937,7 +949,7 @@ LIMIT 4;
             <div>
               <div class="font-bold text-white flex justify-between">
                 <span>Automated REST API Data Extraction & Warehouse Pipeline</span>
-                <span class="text-cyan-400 font-mono">Python, Requests, PostgreSQL, SQLAlchemy</span>
+                <span class="text-emerald-400 font-mono">Python, Requests, PostgreSQL, SQLAlchemy</span>
               </div>
               <p class="text-slate-300 mt-0.5">Engineered an end-to-end Python pipeline extracting JSON payloads from live endpoints with Pandas schema validation and automated PostgreSQL loading, cutting latency by 80%.</p>
             </div>
@@ -945,7 +957,7 @@ LIMIT 4;
             <div>
               <div class="font-bold text-white flex justify-between">
                 <span>Enterprise Customer Lifecycle & Revenue Analytics Engine</span>
-                <span class="text-cyan-400 font-mono">PostgreSQL, Window Functions, CTEs</span>
+                <span class="text-emerald-400 font-mono">PostgreSQL, Window Functions, CTEs</span>
               </div>
               <p class="text-slate-300 mt-0.5">Architected a 3NF relational schema, calculated window rankings and retention cohorts, and reduced execution time by 85% with composite B-Tree indexes.</p>
             </div>
@@ -953,9 +965,17 @@ LIMIT 4;
             <div>
               <div class="font-bold text-white flex justify-between">
                 <span>Executive Business Intelligence & Cohort Analytics Suite</span>
-                <span class="text-cyan-400 font-mono">Power BI, Power Query, Star Schema, DAX</span>
+                <span class="text-emerald-400 font-mono">Power BI, Power Query, Star Schema, DAX</span>
               </div>
               <p class="text-slate-300 mt-0.5">Designed a 3-tab executive dashboard modeling a Star Schema with 15+ custom DAX measures for Customer Lifetime Value (LTV) and YoY performance.</p>
+            </div>
+
+            <div>
+              <div class="font-bold text-white flex justify-between">
+                <span>Customer Churn Predictive Intelligence & Natural Language Query Portal</span>
+                <span class="text-emerald-400 font-mono">Python, Scikit-Learn, SHAP, Streamlit</span>
+              </div>
+              <p class="text-slate-300 mt-0.5">Trained a Random Forest classifier with SMOTE to predict churn risk; visualized SHAP explainability and embedded conversational Text-to-SQL.</p>
             </div>
           </div>
         </div>
@@ -984,189 +1004,192 @@ LIMIT 4;
   </div>
 
   <!-- ======================================================= -->
-  <!-- MODAL 2: INTERACTIVE PORTFOLIO MANAGER / CMS           -->
+  <!-- SECURE ADMIN AUTH MODAL (FOR AYUSH ONLY)                -->
   <!-- ======================================================= -->
-  <div id="admin-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-3 sm:p-6 modal-backdrop">
-    <div class="glass-card bg-dark-900 border border-slate-700 w-full max-w-2xl max-h-[92vh] rounded-3xl flex flex-col shadow-2xl overflow-hidden animate-in fade-in zoom-in duration-200">
-      
-      <!-- Top Bar -->
-      <div class="px-6 py-4 bg-dark-950 border-b border-slate-800 flex items-center justify-between">
+  <div id="admin-auth-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 modal-backdrop">
+    <div class="glass-card bg-dark-900 border border-slate-700 w-full max-w-sm rounded-2xl p-6 space-y-4 shadow-2xl">
+      <div class="flex items-center justify-between">
         <div class="flex items-center gap-2">
-          <div class="w-8 h-8 rounded-lg bg-cyan-500/20 border border-cyan-500/40 flex items-center justify-center text-cyan-400 font-mono text-sm font-bold">
-            <i data-lucide="sliders" class="w-4 h-4"></i>
+          <div class="w-8 h-8 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center">
+            <i data-lucide="shield-check" class="w-4 h-4"></i>
           </div>
           <div>
-            <h3 class="text-sm font-bold text-white">Portfolio Manager</h3>
-            <p class="text-[11px] text-slate-400 font-mono">Add custom skills, projects, or upload a new CV</p>
+            <h3 class="text-sm font-bold text-white">Ayush Admin Verification</h3>
+            <p class="text-[10px] text-slate-400 font-mono">Authorized Access Only</p>
           </div>
         </div>
-        <button onclick="closeAdminModal()" class="p-2 rounded-lg bg-dark-850 border border-slate-700 text-slate-400 hover:text-red-400 transition sound-click">
+        <button onclick="closeAdminAuthModal()" class="text-slate-400 hover:text-white">
           <i data-lucide="x" class="w-4 h-4"></i>
         </button>
       </div>
 
-      <!-- Tab Navigation inside CMS -->
-      <div class="flex border-b border-slate-800 bg-dark-950/60 text-xs font-mono px-6">
-        <button onclick="switchAdminTab('project-tab')" id="tab-btn-project" class="py-3 px-4 text-cyan-400 border-b-2 border-cyan-400 font-semibold flex items-center gap-1.5 sound-click">
-          <i data-lucide="plus-circle" class="w-3.5 h-3.5"></i> Add Project
+      <form onsubmit="handleAdminLogin(event)" class="space-y-3">
+        <div>
+          <label class="block text-xs font-mono text-slate-300 mb-1">Enter Master Password:</label>
+          <input type="password" id="admin-pass-input" placeholder="Password" required class="w-full px-3.5 py-2 rounded-xl bg-dark-850 border border-slate-700 text-xs text-white focus:outline-none focus:border-amber-400">
+        </div>
+        <button type="submit" class="w-full py-2.5 rounded-xl bg-gradient-to-r from-amber-500 to-yellow-500 hover:from-amber-400 hover:to-yellow-400 text-dark-950 font-semibold text-xs transition">
+          Unlock Portfolio CMS
         </button>
-        <button onclick="switchAdminTab('skill-tab')" id="tab-btn-skill" class="py-3 px-4 text-slate-400 border-b-2 border-transparent hover:text-slate-200 font-semibold flex items-center gap-1.5 sound-click">
-          <i data-lucide="cpu" class="w-3.5 h-3.5"></i> Add Skill
-        </button>
-        <button onclick="switchAdminTab('cv-tab')" id="tab-btn-cv" class="py-3 px-4 text-slate-400 border-b-2 border-transparent hover:text-slate-200 font-semibold flex items-center gap-1.5 sound-click">
-          <i data-lucide="file-up" class="w-3.5 h-3.5"></i> Update CV
-        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ======================================================= -->
+  <!-- AYUSH'S PRIVATE ADMIN CMS DRAWER                        -->
+  <!-- ======================================================= -->
+  <div id="admin-cms-drawer" class="fixed top-0 right-0 h-full w-full max-w-md bg-dark-900 border-l border-slate-800 z-50 transform translate-x-full transition-transform duration-300 shadow-2xl overflow-y-auto custom-scroll">
+    <div class="p-6 space-y-6">
+      
+      <!-- Drawer Header -->
+      <div class="flex items-center justify-between pb-4 border-b border-slate-800">
+        <div class="flex items-center gap-2">
+          <div class="w-7 h-7 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-xs">
+            AP
+          </div>
+          <div>
+            <h3 class="text-sm font-bold text-white">Ayush Admin Manager</h3>
+            <p class="text-[10px] text-emerald-400 font-mono">Authenticated Session Active</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-2">
+          <button onclick="handleAdminLogout()" title="Lock Portal" class="px-2.5 py-1 rounded-lg bg-red-500/20 text-red-400 hover:bg-red-500/30 text-xs font-mono transition">
+            Lock / Logout
+          </button>
+          <button onclick="closeAdminDrawer()" class="text-slate-400 hover:text-white">
+            <i data-lucide="x" class="w-5 h-5"></i>
+          </button>
+        </div>
       </div>
 
-      <!-- Tab Content Area -->
-      <div class="p-6 overflow-y-auto custom-scroll space-y-6">
-        
-        <!-- SUB-TAB 1: ADD PROJECT -->
-        <div id="project-tab" class="space-y-4">
-          <form id="new-project-form" onsubmit="handleAddNewProject(event)" class="space-y-4">
-            <div>
-              <label class="block text-xs font-mono text-slate-400 mb-1">Project Title</label>
-              <input type="text" id="proj-title" required placeholder="e.g. Automated Marketing ROI Engine" class="w-full px-3.5 py-2.5 rounded-xl bg-dark-850 border border-slate-800 text-xs focus:border-cyan-400 focus:outline-none text-slate-200">
-            </div>
-
-            <div class="grid grid-cols-2 gap-3">
-              <div>
-                <label class="block text-xs font-mono text-slate-400 mb-1">Category</label>
-                <select id="proj-category" class="w-full px-3.5 py-2.5 rounded-xl bg-dark-850 border border-slate-800 text-xs focus:border-cyan-400 focus:outline-none text-slate-200">
-                  <option value="pipeline">Data Pipelines / ETL</option>
-                  <option value="sql">SQL & Dashboards</option>
-                  <option value="aiml">AI & ML Agents</option>
-                </select>
-              </div>
-              <div>
-                <label class="block text-xs font-mono text-slate-400 mb-1">GitHub / Project URL</label>
-                <input type="url" id="proj-url" placeholder="https://github.com/ayush25-28/..." class="w-full px-3.5 py-2.5 rounded-xl bg-dark-850 border border-slate-800 text-xs focus:border-cyan-400 focus:outline-none text-slate-200">
-              </div>
-            </div>
-
-            <div>
-              <label class="block text-xs font-mono text-slate-400 mb-1">Description</label>
-              <textarea id="proj-desc" rows="2" required placeholder="Explain the business problem, methods used, and impact..." class="w-full px-3.5 py-2.5 rounded-xl bg-dark-850 border border-slate-800 text-xs focus:border-cyan-400 focus:outline-none text-slate-200"></textarea>
-            </div>
-
-            <div>
-              <label class="block text-xs font-mono text-slate-400 mb-1">Architecture Flow (e.g. API ➔ Pandas ➔ PostgreSQL)</label>
-              <input type="text" id="proj-flow" placeholder="e.g. REST API ➔ requests ➔ Pandas ➔ PostgreSQL" class="w-full px-3.5 py-2.5 rounded-xl bg-dark-850 border border-slate-800 text-xs focus:border-cyan-400 focus:outline-none text-slate-200">
-            </div>
-
-            <div class="grid grid-cols-2 gap-3">
-              <div>
-                <label class="block text-xs font-mono text-slate-400 mb-1">Key Metric (e.g. 75% Speedup)</label>
-                <input type="text" id="proj-metric-val" placeholder="85% or 5+ hrs" class="w-full px-3.5 py-2.5 rounded-xl bg-dark-850 border border-slate-800 text-xs focus:border-cyan-400 focus:outline-none text-slate-200">
-              </div>
-              <div>
-                <label class="block text-xs font-mono text-slate-400 mb-1">Metric Label</label>
-                <input type="text" id="proj-metric-lbl" placeholder="Query Latency Cut" class="w-full px-3.5 py-2.5 rounded-xl bg-dark-850 border border-slate-800 text-xs focus:border-cyan-400 focus:outline-none text-slate-200">
-              </div>
-            </div>
-
-            <div>
-              <label class="block text-xs font-mono text-slate-400 mb-1">Tech Stack Tags (Comma-separated)</label>
-              <input type="text" id="proj-tags" placeholder="Python, SQL, PostgreSQL, Power BI" class="w-full px-3.5 py-2.5 rounded-xl bg-dark-850 border border-slate-800 text-xs focus:border-cyan-400 focus:outline-none text-slate-200">
-            </div>
-
-            <button type="submit" class="w-full py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-emerald-500 text-dark-950 font-semibold text-xs transition flex items-center justify-center gap-2 sound-click">
-              <i data-lucide="plus" class="w-4 h-4"></i>
-              <span>Save & Publish Project to Portfolio</span>
-            </button>
-          </form>
+      <!-- Action 1: Upload / Replace Active CV -->
+      <div class="glass-card p-4 rounded-2xl border border-slate-800 space-y-3">
+        <div class="flex items-center gap-2">
+          <i data-lucide="file-up" class="w-4 h-4 text-emerald-400"></i>
+          <h4 class="text-xs font-bold text-white uppercase font-mono tracking-wider">Update Active Resume</h4>
         </div>
+        <p class="text-[11px] text-slate-400">
+          Upload your latest PDF/DOC. It immediately updates all public download buttons on the site.
+        </p>
+        <input type="file" id="cv-file-input" accept=".pdf,.doc,.docx" class="w-full text-xs text-slate-400 file:mr-3 file:py-2 file:px-3 file:rounded-xl file:border-0 file:text-xs file:font-semibold file:bg-dark-800 file:text-emerald-400 hover:file:bg-dark-750 cursor-pointer">
+        <div id="cv-status" class="text-[11px] font-mono text-emerald-400 hidden"></div>
+      </div>
 
-        <!-- SUB-TAB 2: ADD SKILL -->
-        <div id="skill-tab" class="hidden space-y-4">
-          <form id="new-skill-form" onsubmit="handleAddNewSkill(event)" class="space-y-4">
-            <div>
-              <label class="block text-xs font-mono text-slate-400 mb-1">Skill Category</label>
-              <select id="skill-category" class="w-full px-3.5 py-2.5 rounded-xl bg-dark-850 border border-slate-800 text-xs focus:border-cyan-400 focus:outline-none text-slate-200">
-                <option value="Databases & SQL">Enterprise Databases & SQL</option>
-                <option value="Business Intelligence & Viz">Business Intelligence & Viz</option>
-                <option value="Pipelines & Programming">Pipelines & Programming</option>
-                <option value="Spreadsheets & Applied Stats">Spreadsheets & Applied Stats</option>
-              </select>
-            </div>
-
-            <div>
-              <label class="block text-xs font-mono text-slate-400 mb-1">Skill Name / Description</label>
-              <input type="text" id="skill-name" required placeholder="e.g. dbt (Data Build Tool) Transformations" class="w-full px-3.5 py-2.5 rounded-xl bg-dark-850 border border-slate-800 text-xs focus:border-cyan-400 focus:outline-none text-slate-200">
-            </div>
-
-            <div>
-              <div class="flex justify-between text-xs font-mono text-slate-400 mb-1">
-                <span>Proficiency Level (%):</span>
-                <span id="skill-pct-val" class="text-cyan-400 font-bold">90%</span>
-              </div>
-              <input type="range" id="skill-proficiency" min="50" max="100" value="90" oninput="document.getElementById('skill-pct-val').textContent = this.value + '%'" class="w-full h-2 bg-dark-950 rounded-lg appearance-none cursor-pointer accent-cyan-400">
-            </div>
-
-            <button type="submit" class="w-full py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-emerald-500 text-dark-950 font-semibold text-xs transition flex items-center justify-center gap-2 sound-click">
-              <i data-lucide="check" class="w-4 h-4"></i>
-              <span>Add Skill to Matrix</span>
-            </button>
-          </form>
+      <!-- Action 2: Add Custom Project -->
+      <div class="glass-card p-4 rounded-2xl border border-slate-800 space-y-3">
+        <div class="flex items-center gap-2">
+          <i data-lucide="plus-circle" class="w-4 h-4 text-cyan-400"></i>
+          <h4 class="text-xs font-bold text-white uppercase font-mono tracking-wider">Add New Project</h4>
         </div>
-
-        <!-- SUB-TAB 3: UPDATE CV -->
-        <div id="cv-tab" class="hidden space-y-4">
-          <div class="p-4 bg-dark-950/80 rounded-2xl border border-slate-800 text-xs space-y-3">
-            <h4 class="font-bold text-white flex items-center gap-2">
-              <i data-lucide="upload-cloud" class="w-4 h-4 text-emerald-400"></i>
-              Upload Updated Resume File
-            </h4>
-            <p class="text-slate-400 leading-relaxed text-[11px]">
-              Select a PDF or document from your computer. It will be converted and saved directly to your browser's persistent storage so the <b>"Download CV"</b> buttons will instantly provide your new file!
-            </p>
-
-            <div class="pt-2">
-              <input type="file" id="cv-file-input" accept=".pdf,.doc,.docx" class="block w-full text-xs text-slate-400 file:mr-4 file:py-2 file:px-4 file:rounded-xl file:border-0 file:text-xs file:font-semibold file:bg-dark-850 file:text-cyan-400 hover:file:bg-dark-800 cursor-pointer">
+        <form onsubmit="handleAddNewProject(event)" class="space-y-2.5 text-xs">
+          <div>
+            <label class="block text-slate-400 font-mono text-[10px] mb-1">Project Title</label>
+            <input type="text" id="new-proj-title" required placeholder="e.g. Real-Time Kafka Pipeline" class="w-full px-3 py-1.5 rounded-lg bg-dark-850 border border-slate-700 text-white text-xs focus:outline-none focus:border-cyan-400">
+          </div>
+          <div>
+            <label class="block text-slate-400 font-mono text-[10px] mb-1">Category</label>
+            <select id="new-proj-category" class="w-full px-3 py-1.5 rounded-lg bg-dark-850 border border-slate-700 text-white text-xs focus:outline-none focus:border-cyan-400">
+              <option value="sql">SQL & Dashboards</option>
+              <option value="pipeline">Data Pipelines</option>
+              <option value="aiml">AI & ML Agents</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-slate-400 font-mono text-[10px] mb-1">Description</label>
+            <textarea id="new-proj-desc" rows="2" required placeholder="Describe business problem, methods, and metric results..." class="w-full px-3 py-1.5 rounded-lg bg-dark-850 border border-slate-700 text-white text-xs focus:outline-none focus:border-cyan-400"></textarea>
+          </div>
+          <div>
+            <label class="block text-slate-400 font-mono text-[10px] mb-1">Architecture Flow</label>
+            <input type="text" id="new-proj-flow" placeholder="e.g. Source -> Pandas -> PostgreSQL -> Power BI" class="w-full px-3 py-1.5 rounded-lg bg-dark-850 border border-slate-700 text-white text-xs focus:outline-none focus:border-cyan-400">
+          </div>
+          <div class="grid grid-cols-2 gap-2">
+            <div>
+              <label class="block text-slate-400 font-mono text-[10px] mb-1">Impact Metric</label>
+              <input type="text" id="new-proj-metric" placeholder="e.g. 95% Uptime" class="w-full px-3 py-1.5 rounded-lg bg-dark-850 border border-slate-700 text-white text-xs focus:outline-none focus:border-cyan-400">
             </div>
-
-            <div id="cv-upload-status" class="hidden text-xs text-emerald-400 font-mono pt-1">
-              ✓ Custom CV file loaded successfully.
+            <div>
+              <label class="block text-slate-400 font-mono text-[10px] mb-1">GitHub URL</label>
+              <input type="url" id="new-proj-url" placeholder="https://github.com/ayush25-28" class="w-full px-3 py-1.5 rounded-lg bg-dark-850 border border-slate-700 text-white text-xs focus:outline-none focus:border-cyan-400">
             </div>
           </div>
-
-          <div class="p-4 bg-dark-950/80 rounded-2xl border border-slate-800 text-xs space-y-2">
-            <h4 class="font-bold text-white">Reset to Original Portfolio Defaults</h4>
-            <p class="text-slate-400 text-[11px]">Want to restore original verified skills, projects, and the baseline resume?</p>
-            <button onclick="resetPortfolioDefaults()" class="px-4 py-2 rounded-xl bg-red-500/10 hover:bg-red-500/20 text-red-400 border border-red-500/30 font-mono text-xs transition sound-click">
-              Reset Everything to Default
-            </button>
+          <div>
+            <label class="block text-slate-400 font-mono text-[10px] mb-1">Tech Stack Tags (Comma separated)</label>
+            <input type="text" id="new-proj-tags" placeholder="Python, Kafka, SQL, Docker" class="w-full px-3 py-1.5 rounded-lg bg-dark-850 border border-slate-700 text-white text-xs focus:outline-none focus:border-cyan-400">
           </div>
-        </div>
+          <button type="submit" class="w-full py-2 rounded-xl bg-gradient-to-r from-cyan-500 to-emerald-500 hover:from-cyan-400 hover:to-emerald-400 text-dark-950 font-semibold text-xs transition">
+            Publish Project to Live Grid
+          </button>
+        </form>
+      </div>
 
+      <!-- Action 3: Add Skill -->
+      <div class="glass-card p-4 rounded-2xl border border-slate-800 space-y-3">
+        <div class="flex items-center gap-2">
+          <i data-lucide="cpu" class="w-4 h-4 text-emerald-400"></i>
+          <h4 class="text-xs font-bold text-white uppercase font-mono tracking-wider">Add Skill</h4>
+        </div>
+        <form onsubmit="handleAddNewSkill(event)" class="space-y-2.5 text-xs">
+          <div>
+            <label class="block text-slate-400 font-mono text-[10px] mb-1">Target Category</label>
+            <select id="new-skill-cat" class="w-full px-3 py-1.5 rounded-lg bg-dark-850 border border-slate-700 text-white text-xs focus:outline-none focus:border-emerald-400">
+              <option value="Databases & SQL">Enterprise Databases & SQL</option>
+              <option value="Business Intelligence & Viz">Business Intelligence & Viz</option>
+              <option value="Pipelines & Programming">Pipelines & Programming</option>
+              <option value="Spreadsheets & Applied Stats">Spreadsheets & Applied Stats</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-slate-400 font-mono text-[10px] mb-1">Skill Name</label>
+            <input type="text" id="new-skill-name" required placeholder="e.g. Apache Airflow Orchestration" class="w-full px-3 py-1.5 rounded-lg bg-dark-850 border border-slate-700 text-white text-xs focus:outline-none focus:border-emerald-400">
+          </div>
+          <div>
+            <label class="block text-slate-400 font-mono text-[10px] mb-1">Proficiency % (10 - 100)</label>
+            <input type="number" id="new-skill-pct" min="10" max="100" value="90" required class="w-full px-3 py-1.5 rounded-lg bg-dark-850 border border-slate-700 text-white text-xs focus:outline-none focus:border-emerald-400">
+          </div>
+          <button type="submit" class="w-full py-2 rounded-xl bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-400 hover:to-cyan-400 text-dark-950 font-semibold text-xs transition">
+            Add Skill to Matrix
+          </button>
+        </form>
+      </div>
+
+      <!-- Action 4: Restore Defaults -->
+      <div class="pt-2">
+        <button onclick="resetAllCustomData()" class="w-full py-2 rounded-xl bg-dark-850 border border-slate-700 text-slate-400 hover:text-red-400 hover:border-red-500/40 text-xs font-mono transition">
+          Reset All Custom Data to Default
+        </button>
       </div>
 
     </div>
   </div>
 
-  <!-- FOOTER -->
-  <footer class="border-t border-slate-900 bg-dark-950 py-8 px-4 text-center text-xs text-slate-500 font-mono">
+  <!-- ======================================================= -->
+  <!-- FOOTER                                                  -->
+  <!-- ======================================================= -->
+  <footer class="border-t border-slate-900 bg-dark-950 py-10 px-4 text-center text-xs text-slate-500 font-mono">
     <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
       <div>
-        Designed & Built for <span class="text-slate-300 font-semibold">Ayush's Portfolio</span> • Delhi, India
+        Designed & Built for <span class="text-slate-300 font-semibold">Ayush's Portfolio</span> &bull; Delhi NCR, India
       </div>
       <div class="flex items-center gap-6">
-        <a href="#hero" class="hover:text-cyan-400 transition">Back to Top ↑</a>
-        <button onclick="openAdminModal()" class="text-cyan-400 hover:underline">Portfolio Manager</button>
-        <a href="mailto:ayushkumar.281299@gmail.com" class="hover:text-cyan-400 transition">Email Me</a>
+        <a href="#hero" class="hover:text-emerald-400 transition">Back to Top &uarr;</a>
+        <a href="#projects" class="hover:text-emerald-400 transition">Projects</a>
+        <a href="mailto:ayushkumar.281299@gmail.com" class="hover:text-emerald-400 transition">Direct Email</a>
+        <button onclick="handleAdminEntryClick()" class="hover:text-amber-400 text-slate-600 transition flex items-center gap-1" title="Ayush Admin Access">
+          <i data-lucide="lock" class="w-3.5 h-3.5"></i> Admin
+        </button>
       </div>
     </div>
   </footer>
 
   <!-- ======================================================= -->
-  <!-- JAVASCRIPT LOGIC & DYNAMIC CMS ENGINE                   -->
+  <!-- JAVASCRIPT APPLICATION LOGIC                            -->
   <!-- ======================================================= -->
   <script>
     // Initialize Lucide Icons
     lucide.createIcons();
 
     // -------------------------------------------------------------
-    // 1. Audio Synthesis & UI Blips
+    // 1. Audio Synthesizer & Tactile UI Clicks (Web Audio API)
     // -------------------------------------------------------------
     let soundEnabled = true;
     const AudioContext = window.AudioContext || window.webkitAudioContext;
@@ -1181,19 +1204,17 @@ LIMIT 4;
         const gain = audioCtx.createGain();
         osc.type = 'sine';
         osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
-        gain.gain.setValueAtTime(0.04, audioCtx.currentTime);
+        gain.gain.setValueAtTime(0.035, audioCtx.currentTime);
         gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + duration);
         osc.connect(gain);
         gain.connect(audioCtx.destination);
         osc.start();
         osc.stop(audioCtx.currentTime + duration);
-      } catch (e) {
-        // Fallback
-      }
+      } catch (e) {}
     }
 
     document.querySelectorAll('.sound-click').forEach(elem => {
-      elem.addEventListener('click', () => playBlip(750, 0.05));
+      elem.addEventListener('click', () => playBlip(750, 0.04));
     });
 
     const soundBtn = document.getElementById('sound-btn');
@@ -1202,7 +1223,7 @@ LIMIT 4;
       soundEnabled = !soundEnabled;
       soundIcon.setAttribute('data-lucide', soundEnabled ? 'volume-2' : 'volume-x');
       lucide.createIcons();
-      showToast(soundEnabled ? "Audio Synthesizer: ON" : "Audio Synthesizer: MUTED");
+      showToast(soundEnabled ? "Tactile Audio: Enabled" : "Tactile Audio: Muted");
     });
 
     function showToast(message) {
@@ -1214,11 +1235,136 @@ LIMIT 4;
       setTimeout(() => {
         toastBox.classList.remove('translate-y-0', 'opacity-100');
         toastBox.classList.add('translate-y-24', 'opacity-0');
-      }, 3000);
+      }, 3500);
     }
 
     // -------------------------------------------------------------
-    // 2. Default Data Store for Dynamic Content (Projects & Skills)
+    // 2. Interactive Network Canvas (Nodes + Cursor Gravity)
+    // -------------------------------------------------------------
+    const canvas = document.getElementById('network-canvas');
+    const ctx = canvas.getContext('2d');
+    let width = canvas.width = window.innerWidth;
+    let height = canvas.height = window.innerHeight;
+
+    let mouse = { x: null, y: null };
+
+    window.addEventListener('mousemove', (e) => {
+      mouse.x = e.clientX;
+      mouse.y = e.clientY;
+      const blur = document.getElementById('cursor-blur');
+      if (blur) {
+        blur.style.left = e.clientX + 'px';
+        blur.style.top = e.clientY + 'px';
+      }
+    });
+
+    window.addEventListener('resize', () => {
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+    });
+
+    const nodeCount = Math.min(width > 768 ? 60 : 25, 65);
+    const nodes = [];
+
+    for (let i = 0; i < nodeCount; i++) {
+      nodes.push({
+        x: Math.random() * width,
+        y: Math.random() * height,
+        vx: (Math.random() - 0.5) * 0.45,
+        vy: (Math.random() - 0.5) * 0.45,
+        radius: Math.random() * 1.6 + 0.8
+      });
+    }
+
+    function animateNetwork() {
+      ctx.clearRect(0, 0, width, height);
+      ctx.fillStyle = 'rgba(16, 185, 129, 0.45)';
+      ctx.strokeStyle = 'rgba(6, 182, 212, 0.08)';
+
+      for (let i = 0; i < nodes.length; i++) {
+        const p = nodes[i];
+        p.x += p.vx;
+        p.y += p.vy;
+
+        if (p.x < 0 || p.x > width) p.vx *= -1;
+        if (p.y < 0 || p.y > height) p.vy *= -1;
+
+        // Gravitational reaction
+        if (mouse.x !== null) {
+          const dx = mouse.x - p.x;
+          const dy = mouse.y - p.y;
+          const dist = Math.hypot(dx, dy);
+          if (dist < 120) {
+            p.x -= (dx / dist) * 0.6;
+            p.y -= (dy / dist) * 0.6;
+          }
+        }
+
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+        ctx.fill();
+
+        for (let j = i + 1; j < nodes.length; j++) {
+          const p2 = nodes[j];
+          const dist = Math.hypot(p.x - p2.x, p.y - p2.y);
+          if (dist < 115) {
+            ctx.beginPath();
+            ctx.moveTo(p.x, p.y);
+            ctx.lineTo(p2.x, p2.y);
+            ctx.stroke();
+          }
+        }
+      }
+      requestAnimationFrame(animateNetwork);
+    }
+    animateNetwork();
+
+    // -------------------------------------------------------------
+    // 3. Scroll Progress Indicator & Typewriter Headline
+    // -------------------------------------------------------------
+    window.addEventListener('scroll', () => {
+      const totalScroll = document.documentElement.scrollTop;
+      const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const progress = (totalScroll / windowHeight) * 100;
+      document.getElementById('scroll-progress').style.width = progress + '%';
+    });
+
+    const typewriterWords = [
+      "Enterprise SQL Engines.",
+      "Automated REST API Pipelines.",
+      "Executive Power BI Dashboards.",
+      "Predictive Machine Learning Models."
+    ];
+    let wordIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    const typewriterElem = document.getElementById('typewriter');
+
+    function typeEffect() {
+      const currentWord = typewriterWords[wordIndex];
+      if (isDeleting) {
+        typewriterElem.textContent = currentWord.substring(0, charIndex - 1);
+        charIndex--;
+      } else {
+        typewriterElem.textContent = currentWord.substring(0, charIndex + 1);
+        charIndex++;
+      }
+
+      let speed = isDeleting ? 45 : 90;
+      if (!isDeleting && charIndex === currentWord.length) {
+        speed = 1800;
+        isDeleting = true;
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        wordIndex = (wordIndex + 1) % typewriterWords.length;
+        speed = 400;
+      }
+      setTimeout(typeEffect, speed);
+    }
+    typeEffect();
+
+    // -------------------------------------------------------------
+    // 4. Data Layer: Verified Projects & Skills
     // -------------------------------------------------------------
     const DEFAULT_PROJECTS = [
       {
@@ -1227,13 +1373,13 @@ LIMIT 4;
         tagLabel: "Data Engineering",
         badge: "100% Automated",
         title: "Automated REST API Data Extraction & Warehouse Pipeline",
-        desc: "Engineered an automated end-to-end Python ETL pipeline ingesting paginated JSON payloads from live REST endpoints, schema validation, and relational PostgreSQL loading.",
-        flow: "REST API ➔ requests ➔ Pandas Imputation ➔ SQLAlchemy ➔ PostgreSQL",
+        desc: "Engineered an automated end-to-end Python ETL pipeline ingesting paginated JSON payloads from live REST endpoints, schema validation in Pandas, and relational PostgreSQL loading via SQLAlchemy.",
+        flow: "REST API -> requests -> Pandas Imputation -> SQLAlchemy -> PostgreSQL",
         metricVal: "80%",
         metricLbl: "Ingestion Latency Cut",
         metricVal2: "99.8%",
-        metricLbl2: "Pipeline Uptime",
-        tags: ["Python", "PostgreSQL", "SQLAlchemy"],
+        metricLbl2: "Pipeline Reliability",
+        tags: ["Python", "PostgreSQL", "SQLAlchemy", "Requests"],
         url: "https://github.com/ayush25-28"
       },
       {
@@ -1248,7 +1394,7 @@ LIMIT 4;
         metricLbl: "Query Runtime Cut",
         metricVal2: "100%",
         metricLbl2: "Window Accuracy",
-        tags: ["PostgreSQL", "Window Functions", "CTEs"],
+        tags: ["PostgreSQL", "Window Functions", "CTEs", "EXPLAIN ANALYZE"],
         url: "https://github.com/ayush25-28"
       },
       {
@@ -1257,13 +1403,13 @@ LIMIT 4;
         tagLabel: "Power BI & DAX",
         badge: "Executive Suite",
         title: "Executive Business Intelligence & Cohort Analytics Suite",
-        desc: "Designed a 3-tab executive dashboard modeling a Star Schema (1 Fact, 4 Dimensions) with a dedicated Date table. Authored 15+ complex DAX measures leveraging CALCULATE().",
-        flow: "Star Schema • 1:* Single-direction Filter • M-Code Transformations",
+        desc: "Designed a 3-tab executive dashboard modeling a Star Schema (1 Fact, 4 Dimensions) with a dedicated Date table. Authored 15+ complex DAX measures leveraging CALCULATE() and time intelligence.",
+        flow: "Star Schema &bull; 1:* Single-direction Filter &bull; M-Code Transformations",
         metricVal: "15+",
         metricLbl: "Custom DAX Measures",
         metricVal2: "3 Tabs",
         metricLbl2: "Executive / Cohorts / Drill",
-        tags: ["Power BI", "DAX", "Star Schema"],
+        tags: ["Power BI", "DAX", "Star Schema", "Power Query"],
         url: "https://github.com/ayush25-28"
       },
       {
@@ -1271,14 +1417,14 @@ LIMIT 4;
         category: "aiml",
         tagLabel: "Applied ML & GenAI",
         badge: "SHAP + Streamlit",
-        title: "Customer Churn Predictive Intelligence & Natural Language Query Portal",
-        desc: "Trained a Random Forest classifier with SMOTE to predict churn probability; extracted feature explanations via SHAP TreeExplainer and embedded conversational Text-to-SQL.",
+        title: "Customer Churn Predictive Intelligence & Text-to-SQL Portal",
+        desc: "Trained a Random Forest classifier with SMOTE to predict churn probability; extracted feature explanations via SHAP TreeExplainer and embedded conversational Text-to-SQL in Streamlit.",
         flow: "SHAP Waterfall Visualizations + Natural Language DB Querying",
         metricVal: "0.89",
         metricLbl: "ROC-AUC Score",
         metricVal2: "< 3.0s",
         metricLbl2: "Text-to-SQL Response",
-        tags: ["Scikit-Learn", "SHAP", "Streamlit"],
+        tags: ["Python", "Scikit-Learn", "SHAP", "Streamlit"],
         url: "https://github.com/ayush25-28"
       },
       {
@@ -1288,7 +1434,7 @@ LIMIT 4;
         badge: "iTunes Store",
         title: "Apple iTunes Global Media Store & Sales Intelligence",
         desc: "Modeled digital store database schema and executed multi-table SQL queries leveraging window functions and CTEs to analyze cross-regional tracks, customer lifetime value (LTV), and invoices.",
-        flow: "25+ Product Lines • Genre Saturation • Basket Size",
+        flow: "25+ Product Lines &bull; Genre Saturation &bull; Basket Size",
         metricVal: "11 Tables",
         metricLbl: "Relational Schema",
         metricVal2: "100%",
@@ -1303,7 +1449,7 @@ LIMIT 4;
         badge: "Market Analysis",
         title: "Zomato Restaurant Market & Netflix Catalog Intelligence",
         desc: "Executed exploratory data analysis on Zomato records to determine price-tier sweet spots and rating densities. Cleaned and segmented 8,000+ Netflix records to analyze content release pacing.",
-        flow: "Outlier Imputation • Seaborn Heatmaps • Geospatial Density",
+        flow: "Outlier Imputation &bull; Seaborn Heatmaps &bull; Geospatial Density",
         metricVal: "8,000+",
         metricLbl: "Rows Cleaned",
         metricVal2: "12 Plots",
@@ -1360,30 +1506,32 @@ LIMIT 4;
       }
     ];
 
-    // LocalStorage Getters / Setters
-    function getStoredProjects() {
-      const data = localStorage.getItem('ayush_portfolio_projects');
-      return data ? JSON.parse(data) : DEFAULT_PROJECTS;
+    function getProjects() {
+      const stored = localStorage.getItem('ayush_portfolio_projects');
+      return stored ? JSON.parse(stored) : DEFAULT_PROJECTS;
     }
 
-    function getStoredSkills() {
-      const data = localStorage.getItem('ayush_portfolio_skills');
-      return data ? JSON.parse(data) : DEFAULT_SKILLS;
+    function getSkills() {
+      const stored = localStorage.getItem('ayush_portfolio_skills');
+      return stored ? JSON.parse(stored) : DEFAULT_SKILLS;
     }
 
-    // Render Projects Grid
     function renderProjects(projectsToRender) {
       const container = document.getElementById('projects-container');
-      const list = projectsToRender || getStoredProjects();
-      
+      const list = projectsToRender || getProjects();
+      const isAdmin = localStorage.getItem('ayush_is_admin') === 'true';
+
       container.innerHTML = list.map(proj => `
         <div class="project-card glass-card rounded-2xl p-6 flex flex-col justify-between group" data-category="${proj.category}">
           <div class="space-y-4">
             <div class="flex items-center justify-between text-xs">
-              <span class="px-2.5 py-1 rounded-md bg-cyan-500/10 text-cyan-400 font-mono border border-cyan-500/20">${proj.tagLabel || 'Analytics'}</span>
-              <span class="text-slate-500 font-mono">${proj.badge || 'Verified'}</span>
+              <span class="px-2.5 py-1 rounded-md bg-emerald-500/10 text-emerald-400 font-mono border border-emerald-500/20">${proj.tagLabel || 'Analytics'}</span>
+              <div class="flex items-center gap-2">
+                <span class="text-slate-500 font-mono">${proj.badge || 'Verified'}</span>
+                ${isAdmin ? `<button onclick="deleteCustomProject('${proj.id}')" title="Delete Project" class="text-red-400 hover:text-red-300 sound-click"><i data-lucide="trash-2" class="w-3.5 h-3.5"></i></button>` : ''}
+              </div>
             </div>
-            <h3 class="text-xl font-bold text-white group-hover:text-cyan-400 transition">
+            <h3 class="text-xl font-bold text-white group-hover:text-emerald-400 transition">
               ${proj.title}
             </h3>
             <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
@@ -1392,7 +1540,7 @@ LIMIT 4;
             ${proj.flow ? `
             <div class="p-3 bg-dark-900/80 rounded-xl border border-slate-800 text-[11px] font-mono text-slate-300 space-y-1">
               <div class="text-slate-500 font-semibold uppercase text-[10px]">Architecture Flow:</div>
-              <div class="text-cyan-300">${proj.flow}</div>
+              <div class="text-emerald-300">${proj.flow}</div>
             </div>` : ''}
             <div class="grid grid-cols-2 gap-2 text-center text-xs font-mono py-1">
               <div class="p-2 rounded-lg bg-dark-850 border border-slate-800">
@@ -1409,7 +1557,7 @@ LIMIT 4;
             <div class="flex flex-wrap gap-1.5 text-[10px] font-mono text-slate-400">
               ${(proj.tags || []).map(t => `<span class="px-2 py-0.5 rounded bg-dark-800">${t}</span>`).join('')}
             </div>
-            <a href="${proj.url || 'https://github.com/ayush25-28'}" target="_blank" class="p-2 rounded-xl bg-slate-800 text-slate-300 hover:text-cyan-400 transition" title="View Source on GitHub">
+            <a href="${proj.url || 'https://github.com/ayush25-28'}" target="_blank" class="p-2 rounded-xl bg-slate-800 text-slate-300 hover:text-emerald-400 transition" title="View Source on GitHub">
               <i data-lucide="github" class="w-4 h-4"></i>
             </a>
           </div>
@@ -1419,15 +1567,13 @@ LIMIT 4;
       lucide.createIcons();
     }
 
-    // Render Skills Matrix
     function renderSkills() {
       const container = document.getElementById('skills-container');
-      const skillGroups = getStoredSkills();
-
-      container.innerHTML = skillGroups.map(grp => `
+      const skills = getSkills();
+      container.innerHTML = skills.map(grp => `
         <div class="glass-card rounded-2xl p-6 space-y-5 border border-slate-700/60">
           <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-xl bg-cyan-500/10 flex items-center justify-center text-cyan-400 border border-cyan-500/20">
+            <div class="w-10 h-10 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-400 border border-emerald-500/20">
               <i data-lucide="${grp.icon || 'database'}" class="w-5 h-5"></i>
             </div>
             <div>
@@ -1440,10 +1586,10 @@ LIMIT 4;
               <div>
                 <div class="flex justify-between text-xs font-mono text-slate-300 mb-1">
                   <span>${item.name}</span>
-                  <span class="text-cyan-400">${item.pct}%</span>
+                  <span class="text-emerald-400">${item.pct}%</span>
                 </div>
                 <div class="h-2 w-full bg-dark-900 rounded-full overflow-hidden">
-                  <div class="h-full bg-gradient-to-r from-cyan-500 to-emerald-400 rounded-full" style="width: ${item.pct}%;"></div>
+                  <div class="h-full bg-gradient-to-r from-emerald-500 to-cyan-400 rounded-full" style="width: ${item.pct}%;"></div>
                 </div>
               </div>
             `).join('')}
@@ -1454,350 +1600,32 @@ LIMIT 4;
       lucide.createIcons();
     }
 
-    // Initial Render of dynamic components
+    function filterProjects(cat) {
+      playBlip(680, 0.04);
+      document.querySelectorAll('.proj-filter-btn').forEach(b => {
+        b.classList.remove('bg-emerald-500', 'text-dark-950', 'font-semibold');
+        b.classList.add('glass-card', 'text-slate-300');
+        if (b.getAttribute('data-category') === cat) {
+          b.classList.add('bg-emerald-500', 'text-dark-950', 'font-semibold');
+          b.classList.remove('glass-card', 'text-slate-300');
+        }
+      });
+
+      const all = getProjects();
+      if (cat === 'all') {
+        renderProjects(all);
+      } else {
+        renderProjects(all.filter(p => p.category === cat));
+      }
+    }
+
     renderProjects();
     renderSkills();
 
     // -------------------------------------------------------------
-    // 3. Dynamic CV / Resume Handler
+    // 5. Interactive SQL & Pipeline Simulator Engine
     // -------------------------------------------------------------
-    function initResumeState() {
-      const customCV = localStorage.getItem('ayush_portfolio_custom_cv');
-      const cvVersionText = document.getElementById('cv-version-text');
-      const downloadLabel = document.getElementById('btn-download-label');
-
-      if (customCV) {
-        cvVersionText.textContent = "Custom Uploaded File (Active)";
-        downloadLabel.textContent = "Download Uploaded CV";
-      } else {
-        cvVersionText.textContent = "Default Verified ATS Document";
-        downloadLabel.textContent = "Download PDF Resume";
-      }
-    }
-    initResumeState();
-
-    // File input change for CV Upload
-    const cvInput = document.getElementById('cv-file-input');
-    if (cvInput) {
-      cvInput.addEventListener('change', function(e) {
-        const file = e.target.files[0];
-        if (!file) return;
-
-        const reader = new FileReader();
-        reader.onload = function(event) {
-          const base64Data = event.target.result;
-          localStorage.setItem('ayush_portfolio_custom_cv', base64Data);
-          localStorage.setItem('ayush_portfolio_custom_cv_name', file.name);
-          document.getElementById('cv-upload-status').classList.remove('hidden');
-          initResumeState();
-          showToast(`CV updated: ${file.name}`);
-        };
-        reader.readAsDataURL(file);
-      });
-    }
-
-    function downloadActiveResume() {
-      playBlip(800, 0.05);
-      const customCV = localStorage.getItem('ayush_portfolio_custom_cv');
-      const customName = localStorage.getItem('ayush_portfolio_custom_cv_name') || 'Kumar_Ayush_Ambstha_Resume.pdf';
-
-      if (customCV) {
-        // Download user uploaded base64 CV
-        const a = document.createElement('a');
-        a.href = customCV;
-        a.download = customName;
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
-        showToast("Downloading your custom uploaded CV...");
-      } else {
-        // Trigger browser print/save for embedded ATS resume
-        printResume();
-      }
-    }
-
-    function printResume() {
-      window.print();
-    }
-
-    // -------------------------------------------------------------
-    // 4. Admin CMS Operations (Add Project, Add Skill, Reset)
-    // -------------------------------------------------------------
-    function handleAddNewProject(e) {
-      e.preventDefault();
-      playBlip(950, 0.04);
-
-      const title = document.getElementById('proj-title').value.trim();
-      const category = document.getElementById('proj-category').value;
-      const url = document.getElementById('proj-url').value.trim() || 'https://github.com/ayush25-28';
-      const desc = document.getElementById('proj-desc').value.trim();
-      const flow = document.getElementById('proj-flow').value.trim();
-      const metricVal = document.getElementById('proj-metric-val').value.trim() || '100%';
-      const metricLbl = document.getElementById('proj-metric-lbl').value.trim() || 'Optimized';
-      const tagsStr = document.getElementById('proj-tags').value.trim();
-      const tags = tagsStr ? tagsStr.split(',').map(s => s.trim()) : ['SQL', 'Analytics'];
-
-      const newProj = {
-        id: 'proj_' + Date.now(),
-        category,
-        tagLabel: category === 'pipeline' ? 'Data Engineering' : (category === 'sql' ? 'SQL & BI' : 'Applied AI'),
-        badge: 'Custom Added',
-        title,
-        desc,
-        flow,
-        metricVal,
-        metricLbl,
-        metricVal2: 'Production',
-        metricLbl2: 'Uptime',
-        tags,
-        url
-      };
-
-      const existing = getStoredProjects();
-      existing.unshift(newProj);
-      localStorage.setItem('ayush_portfolio_projects', JSON.stringify(existing));
-
-      renderProjects();
-      document.getElementById('new-project-form').reset();
-      closeAdminModal();
-      showToast("New project published successfully!");
-    }
-
-    function handleAddNewSkill(e) {
-      e.preventDefault();
-      playBlip(950, 0.04);
-
-      const catName = document.getElementById('skill-category').value;
-      const skillName = document.getElementById('skill-name').value.trim();
-      const pct = parseInt(document.getElementById('skill-proficiency').value, 10);
-
-      const groups = getStoredSkills();
-      const targetGroup = groups.find(g => g.category === catName) || groups[0];
-      targetGroup.items.push({ name: skillName, pct });
-
-      localStorage.setItem('ayush_portfolio_skills', JSON.stringify(groups));
-      renderSkills();
-      document.getElementById('new-skill-form').reset();
-      closeAdminModal();
-      showToast("Skill added to matrix!");
-    }
-
-    function resetPortfolioDefaults() {
-      localStorage.removeItem('ayush_portfolio_projects');
-      localStorage.removeItem('ayush_portfolio_skills');
-      localStorage.removeItem('ayush_portfolio_custom_cv');
-      localStorage.removeItem('ayush_portfolio_custom_cv_name');
-
-      renderProjects();
-      renderSkills();
-      initResumeState();
-      closeAdminModal();
-      showToast("Portfolio reset to original defaults!");
-    }
-
-    // Modal Control Functions
-    function openResumeModal() {
-      playBlip(700, 0.04);
-      document.getElementById('resume-modal').classList.remove('hidden');
-    }
-
-    function closeResumeModal() {
-      document.getElementById('resume-modal').classList.add('hidden');
-    }
-
-    function openAdminModal(tabToOpen) {
-      playBlip(700, 0.04);
-      document.getElementById('admin-modal').classList.remove('hidden');
-      if (tabToOpen) {
-        switchAdminTab(tabToOpen);
-      }
-    }
-
-    function closeAdminModal() {
-      document.getElementById('admin-modal').classList.add('hidden');
-    }
-
-    function switchAdminTab(tabId) {
-      playBlip(600, 0.03);
-      ['project-tab', 'skill-tab', 'cv-tab'].forEach(id => {
-        document.getElementById(id).classList.add('hidden');
-      });
-      document.getElementById(tabId).classList.remove('hidden');
-
-      ['tab-btn-project', 'tab-btn-skill', 'tab-btn-cv'].forEach(btnId => {
-        const btn = document.getElementById(btnId);
-        btn.classList.remove('text-cyan-400', 'border-cyan-400');
-        btn.classList.add('text-slate-400', 'border-transparent');
-      });
-
-      const activeBtnId = tabId === 'project-tab' ? 'tab-btn-project' : (tabId === 'skill-tab' ? 'tab-btn-skill' : 'tab-btn-cv');
-      const activeBtn = document.getElementById(activeBtnId);
-      activeBtn.classList.add('text-cyan-400', 'border-cyan-400');
-      activeBtn.classList.remove('text-slate-400', 'border-transparent');
-    }
-
-    // Close modals on clicking outside
-    window.addEventListener('click', (e) => {
-      const resModal = document.getElementById('resume-modal');
-      const admModal = document.getElementById('admin-modal');
-      if (e.target === resModal) closeResumeModal();
-      if (e.target === admModal) closeAdminModal();
-    });
-
-    // -------------------------------------------------------------
-    // 5. Interactive Particle Node Canvas
-    // -------------------------------------------------------------
-    const canvas = document.getElementById('data-canvas');
-    const ctx = canvas.getContext('2d');
-    let width, height;
-    let particles = [];
-    const mouse = { x: -1000, y: -1000 };
-
-    function resizeCanvas() {
-      width = canvas.width = window.innerWidth;
-      height = canvas.height = window.innerHeight;
-    }
-    window.addEventListener('resize', resizeCanvas);
-    resizeCanvas();
-
-    class Particle {
-      constructor() {
-        this.x = Math.random() * width;
-        this.y = Math.random() * height;
-        this.vx = (Math.random() - 0.5) * 0.7;
-        this.vy = (Math.random() - 0.5) * 0.7;
-        this.radius = Math.random() * 1.5 + 0.8;
-      }
-      update() {
-        this.x += this.vx;
-        this.y += this.vy;
-        if (this.x < 0 || this.x > width) this.vx *= -1;
-        if (this.y < 0 || this.y > height) this.vy *= -1;
-
-        const dx = mouse.x - this.x;
-        const dy = mouse.y - this.y;
-        const dist = Math.sqrt(dx * dx + dy * dy);
-        if (dist < 120) {
-          this.x -= (dx / dist) * 1.5;
-          this.y -= (dy / dist) * 1.5;
-        }
-      }
-      draw() {
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(14, 165, 233, 0.45)';
-        ctx.fill();
-      }
-    }
-
-    function initParticles() {
-      particles = [];
-      const count = Math.floor((width * height) / 18000);
-      for (let i = 0; i < Math.min(count, 80); i++) {
-        particles.push(new Particle());
-      }
-    }
-    initParticles();
-    window.addEventListener('resize', initParticles);
-
-    window.addEventListener('mousemove', (e) => {
-      mouse.x = e.clientX;
-      mouse.y = e.clientY;
-      const blur = document.getElementById('cursor-blur');
-      if (blur) {
-        blur.style.left = e.clientX + 'px';
-        blur.style.top = e.clientY + 'px';
-      }
-    });
-
-    function renderCanvas() {
-      ctx.clearRect(0, 0, width, height);
-      for (let i = 0; i < particles.length; i++) {
-        for (let j = i + 1; j < particles.length; j++) {
-          const dx = particles[i].x - particles[j].x;
-          const dy = particles[i].y - particles[j].y;
-          const dist = Math.sqrt(dx * dx + dy * dy);
-
-          if (dist < 130) {
-            ctx.beginPath();
-            ctx.moveTo(particles[i].x, particles[i].y);
-            ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.strokeStyle = `rgba(14, 165, 233, ${0.15 * (1 - dist / 130)})`;
-            ctx.lineWidth = 0.8;
-            ctx.stroke();
-          }
-        }
-      }
-
-      particles.forEach(p => {
-        p.update();
-        p.draw();
-      });
-
-      requestAnimationFrame(renderCanvas);
-    }
-    renderCanvas();
-
-    // -------------------------------------------------------------
-    // 6. Scroll Progress & Navigation
-    // -------------------------------------------------------------
-    window.addEventListener('scroll', () => {
-      const scrollY = window.scrollY;
-      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const progress = (scrollY / docHeight) * 100;
-      document.getElementById('scroll-progress').style.width = progress + '%';
-    });
-
-    const mobileToggle = document.getElementById('mobile-toggle');
-    const mobileMenu = document.getElementById('mobile-menu');
-    mobileToggle.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
-    document.querySelectorAll('.mobile-link').forEach(link => {
-      link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
-    });
-
-    // -------------------------------------------------------------
-    // 7. Rotating Typewriter Headline
-    // -------------------------------------------------------------
-    const titles = [
-      "Data Analyst.",
-      "Business Intelligence Specialist.",
-      "Analytics Engineer.",
-      "SQL & Python Pipeline Architect."
-    ];
-    let titleIdx = 0;
-    let charIdx = 0;
-    let isDeleting = false;
-    const typeElem = document.getElementById('typewriter');
-
-    function typeEffect() {
-      const current = titles[titleIdx];
-      if (isDeleting) {
-        typeElem.textContent = current.substring(0, charIdx - 1);
-        charIdx--;
-      } else {
-        typeElem.textContent = current.substring(0, charIdx + 1);
-        charIdx++;
-      }
-
-      let speed = isDeleting ? 40 : 80;
-      if (!isDeleting && charIdx === current.length) {
-        speed = 1800;
-        isDeleting = true;
-      } else if (isDeleting && charIdx === 0) {
-        isDeleting = false;
-        titleIdx = (titleIdx + 1) % titles.length;
-        speed = 300;
-      }
-      setTimeout(typeEffect, speed);
-    }
-    typeEffect();
-
-    // -------------------------------------------------------------
-    // 8. Live SQL & Terminal Simulation
-    // -------------------------------------------------------------
-    const queryDatasets = {
+    const simulatorPresets = {
       window_sql: {
         code: `SELECT 
     client_id,
@@ -1811,201 +1639,244 @@ WHERE status = 'Active_Qualified'
 LIMIT 4;`,
         speed: "12.4 ms",
         rows: "4 records",
-        headers: ["client_id", "funnel_stage", "conversion_date", "rank_in_geo", "prev_touchpoint", "variance"],
+        headers: ["client_id", "funnel_stage", "conversion_date", "rank_in_geo", "variance_from_benchmark"],
         data: [
-          ["CL-8092", "Visa Filed", "2026-10-24", "1", "2026-09-12", "+₹14,500.00"],
-          ["CL-7741", "Doc Review", "2026-10-22", "2", "2026-10-01", "-₹3,200.00"],
-          ["CL-9014", "Eligibility OK", "2026-10-20", "3", "NULL", "+₹8,100.00"],
-          ["CL-6548", "Initial Contact", "2026-10-18", "4", "2026-10-14", "-₹1,450.00"]
+          ["AP-1082", "Document Review", "2026-10-18", "1", "+INR 12,500.00"],
+          ["AP-1049", "Visa Filing", "2026-10-15", "2", "-INR 4,200.00"],
+          ["AP-2011", "Initial Assessment", "2026-10-14", "1", "+INR 18,900.00"],
+          ["AP-3104", "Compliance Audit", "2026-10-11", "3", "+INR 6,100.00"]
         ]
       },
       api_pipeline: {
-        code: `# Automated Python ETL Pipeline
-import requests, pandas as pd
+        code: `import requests, pandas as pd
 from sqlalchemy import create_engine
 
-response = requests.get("https://api.abroadcrm.internal/v1/leads?page=1", timeout=5)
-raw_records = response.json()["data"]
+# Step 1: Automated Paginated REST API Extraction
+res = requests.get("https://api.crm-enterprise.internal/v2/leads", headers={"Authorization": "Bearer ..."}, timeout=10)
+raw_json = res.json().get('data', [])
 
-# Schema cleaning & automated warehouse loading
-df = pd.DataFrame(raw_records)
-df['onboarding_velocity_days'] = (pd.to_datetime(df['current_date']) - pd.to_datetime(df['created_at'])).dt.days
-df.to_sql('fact_crm_lifecycle', con=engine, if_exists='append', index=False)
-print(f"Loaded {len(df)} validated client records into PostgreSQL.")`,
+# Step 2: Pandas Schema Validation & Imputation
+df = pd.DataFrame(raw_json)
+df['created_at'] = pd.to_datetime(df['created_at'])
+df['eligibility_score'] = pd.to_numeric(df['eligibility_score']).fillna(0.0)
+
+# Step 3: Load into PostgreSQL Data Warehouse via SQLAlchemy
+engine = create_engine('postgresql://analytics_admin:***@db-cluster/warehouse')
+df.to_sql('fact_crm_leads', con=engine, if_exists='append', index=False)`,
         speed: "24.1 ms",
-        rows: "3 rows payload sample",
-        headers: ["lead_id", "source_channel", "payload_status", "cleaning_checks", "warehouse_status"],
+        rows: "1,250 rows ingested",
+        headers: ["batch_id", "status_code", "records_parsed", "schema_validation", "warehouse_status"],
         data: [
-          ["LD-3011", "Meta Ads Inbound", "JSON Verified", "Nulls Imputed (100%)", "COMMITTED TO PG"],
-          ["LD-3012", "Direct Referral", "JSON Verified", "Outlier Capped", "COMMITTED TO PG"],
-          ["LD-3013", "Website Form", "JSON Verified", "Type Casted", "COMMITTED TO PG"]
+          ["BATCH-882", "200 OK", "500 rows", "PASSED (0 nulls)", "COMMITTED TO PG16"],
+          ["BATCH-883", "200 OK", "500 rows", "PASSED (0 nulls)", "COMMITTED TO PG16"],
+          ["BATCH-884", "200 OK", "250 rows", "PASSED (0 nulls)", "COMMITTED TO PG16"]
         ]
       },
       churn_model: {
-        code: `# Customer Churn Probability & SHAP Attribution
-from sklearn.ensemble import RandomForestClassifier
+        code: `from sklearn.ensemble import RandomForestClassifier
 import shap
 
-model = RandomForestClassifier(n_estimators=100, random_state=42)
-model.fit(X_train_resampled, y_train_resampled)
+# Train Random Forest with SMOTE balance
+rf = RandomForestClassifier(n_estimators=150, max_depth=7, random_state=42)
+rf.fit(X_train_resampled, y_train_resampled)
 
-explainer = shap.TreeExplainer(model)
+# Evaluate explainability via SHAP TreeExplainer
+explainer = shap.TreeExplainer(rf)
 shap_values = explainer.shap_values(X_test)
-print("Top Retention Risk Factors: 1. Days Inactive (44%), 2. Escalation Count (28%), 3. Contract Tenor (18%)")`,
-        speed: "8.6 ms",
-        rows: "3 scored accounts",
-        headers: ["account_id", "churn_prob", "risk_category", "primary_driver", "recommended_action"],
+print(f"Test Set ROC-AUC: 0.892 | Recall: 86.4%")`,
+        speed: "8.7 ms",
+        rows: "Top 4 Churn Drivers",
+        headers: ["feature_name", "shap_importance", "correlation_direction", "business_action"],
         data: [
-          ["ACC-1049", "78.4%", "HIGH RISK", "Days Inactive > 28d", "Trigger Executive Call"],
-          ["ACC-2091", "24.1%", "LOW RISK", "High NPS Survey", "Upsell Extended Support"],
-          ["ACC-3312", "58.9%", "MODERATE", "Payment Delayed", "Send Retention Discount"]
+          ["Days_Since_Last_Touchpoint", "+0.382", "Positive (Risky)", "Auto-trigger CRM SMS notification"],
+          ["Support_Tickets_Logged", "+0.241", "Positive (Escalation)", "Assign Priority Operations Lead"],
+          ["Total_Spend_YoY", "-0.194", "Negative (Protective)", "Eligible for Loyalty Retainer"],
+          ["Tenure_Months", "-0.145", "Negative (Protective)", "Stable Account"]
         ]
       },
       dax_measure: {
-        code: `// Power BI DAX: YoY Growth with Safe Division & Filter Context
-YoY_Sales_Growth % = 
-VAR CurrentPeriodSales = [Total_Revenue]
-VAR PriorPeriodSales = CALCULATE([Total_Revenue], SAMEPERIODLASTYEAR('DimDate'[Date]))
+        code: `YoY_Conversion_Velocity % = 
+VAR CurrentPeriodLeads = [Total Qualified Conversions]
+VAR PriorPeriodLeads = 
+    CALCULATE(
+        [Total Qualified Conversions],
+        SAMEPERIODLASTYEAR('Dim_Date'[Date])
+    )
 RETURN
-DIVIDE(
-    CurrentPeriodSales - PriorPeriodSales,
-    PriorPeriodSales,
-    BLANK()
-)`,
-        speed: "2.1 ms",
-        rows: "Time Intelligence Engine",
-        headers: ["fiscal_quarter", "curr_sales_inr", "prior_sales_inr", "yoy_growth_pct", "kpi_target"],
+    DIVIDE(CurrentPeriodLeads - PriorPeriodLeads, PriorPeriodLeads, 0.0)`,
+        speed: "3.2 ms",
+        rows: "Matrix Calculated",
+        headers: ["fiscal_quarter", "prior_year_leads", "current_year_leads", "yoy_velocity_lift"],
         data: [
-          ["Q3 2026", "₹48,50,000", "₹38,80,000", "+25.0%", "ACHIEVED"],
-          ["Q2 2026", "₹42,10,000", "₹35,08,000", "+20.0%", "ACHIEVED"],
-          ["Q1 2026", "₹37,80,000", "₹32,03,000", "+18.0%", "ACHIEVED"]
+          ["Q1 2026", "182 leads", "228 leads", "+25.27% LIFT"],
+          ["Q2 2026", "210 leads", "264 leads", "+25.71% LIFT"],
+          ["Q3 2026", "240 leads", "300 leads", "+25.00% LIFT"]
         ]
       }
     };
 
     function runTerminalQuery(key) {
-      playBlip(900, 0.04);
-      const target = queryDatasets[key];
-      if (!target) return;
+      playBlip(820, 0.04);
+      const q = simulatorPresets[key];
+      if (!q) return;
 
-      document.getElementById('terminal-code').textContent = target.code;
-      document.getElementById('term-speed').textContent = target.speed;
-      document.getElementById('term-rows').textContent = target.rows;
+      document.getElementById('terminal-code').textContent = q.code;
+      document.getElementById('term-speed').textContent = q.speed;
+      document.getElementById('term-rows').textContent = q.rows;
 
-      renderTerminalTable(target.headers, target.data);
-      showToast(`Executed: ${key.toUpperCase()}`);
+      const tblContainer = document.getElementById('terminal-table-container');
+      tblContainer.innerHTML = `
+        <table class="w-full text-left border-collapse text-xs">
+          <thead>
+            <tr class="border-b border-slate-800 text-slate-400">
+              ${q.headers.map(h => `<th class="py-2 px-3 font-mono">${h}</th>`).join('')}
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-800/60 font-mono">
+            ${q.data.map(row => `
+              <tr class="hover:bg-dark-850/50 text-slate-300">
+                ${row.map((cell, idx) => `
+                  <td class="py-2 px-3 ${idx === 0 ? 'text-emerald-400 font-semibold' : ''}">${cell}</td>
+                `).join('')}
+              </tr>
+            `).join('')}
+          </tbody>
+        </table>
+      `;
     }
+    // Default load
+    runTerminalQuery('window_sql');
 
-    function renderTerminalTable(headers, rows) {
-      const container = document.getElementById('terminal-table-container');
-      let html = '<table class="w-full text-left border-collapse text-xs font-mono">';
-      html += '<thead class="bg-dark-900 border-b border-slate-800 text-slate-400"><tr>';
-      headers.forEach(h => html += `<th class="py-2 px-3">${h}</th>`);
-      html += '</tr></thead><tbody class="divide-y divide-slate-800/60">';
-      rows.forEach(row => {
-        html += '<tr class="hover:bg-slate-800/40 transition">';
-        row.forEach(cell => {
-          const isHighlight = cell.includes('%') || cell.includes('+') || cell.includes('COMMITTED') || cell.includes('ACHIEVED');
-          html += `<td class="py-2 px-3 ${isHighlight ? 'text-emerald-400 font-semibold' : 'text-slate-300'}">${cell}</td>`;
-        });
-        html += '</tr>';
-      });
-      html += '</tbody></table>';
-      container.innerHTML = html;
-    }
-
-    renderTerminalTable(queryDatasets.window_sql.headers, queryDatasets.window_sql.data);
-
-    document.getElementById('copy-terminal-btn').addEventListener('click', () => {
-      const queryText = document.getElementById('terminal-code').innerText;
-      copyToClipboard(queryText);
+    function copyCurrentTerminalCode() {
+      const code = document.getElementById('terminal-code').textContent;
+      copyToClipboard(code);
       showToast("Query copied to clipboard!");
-    });
-
-    // -------------------------------------------------------------
-    // 9. Interactive Category Filtering
-    // -------------------------------------------------------------
-    function filterProjects(category) {
-      playBlip(650, 0.03);
-      const allProjects = getStoredProjects();
-      const buttons = document.querySelectorAll('.proj-filter-btn');
-
-      buttons.forEach(btn => {
-        if (btn.getAttribute('data-category') === category) {
-          btn.classList.add('bg-cyan-500', 'text-dark-950', 'font-semibold');
-          btn.classList.remove('glass-card', 'text-slate-300');
-        } else {
-          btn.classList.remove('bg-cyan-500', 'text-dark-950', 'font-semibold');
-          btn.classList.add('glass-card', 'text-slate-300');
-        }
-      });
-
-      if (category === 'all') {
-        renderProjects(allProjects);
-      } else {
-        const filtered = allProjects.filter(p => p.category === category);
-        renderProjects(filtered);
-      }
     }
 
     // -------------------------------------------------------------
-    // 10. ROI & Automation Calculator
+    // 6. Interactive ROI Calculator
     // -------------------------------------------------------------
     const hoursSlider = document.getElementById('hours-slider');
     const teamSlider = document.getElementById('team-slider');
     const costSlider = document.getElementById('cost-slider');
 
-    const hoursDisplay = document.getElementById('hours-display');
-    const teamDisplay = document.getElementById('team-display');
-    const costDisplay = document.getElementById('cost-display');
+    function updateROICalculation() {
+      const hours = +hoursSlider.value;
+      const team = +teamSlider.value;
+      const cost = +costSlider.value;
 
-    const annualSavingsDisplay = document.getElementById('annual-savings');
-    const hoursSavedDisplay = document.getElementById('hours-saved');
+      document.getElementById('hours-display').textContent = `${hours} hrs`;
+      document.getElementById('team-display').textContent = `${team} ${team === 1 ? 'member' : 'members'}`;
+      document.getElementById('cost-display').textContent = `₹${cost.toLocaleString('en-IN')} / hr`;
 
-    function updateCalculator() {
-      const hoursPerWeek = parseFloat(hoursSlider.value);
-      const teamMembers = parseFloat(teamSlider.value);
-      const costPerHour = parseFloat(costSlider.value);
+      // Formula: 52 weeks * hours saved per person * team members * hourly rate
+      const annualHours = hours * team * 52;
+      const totalSavings = annualHours * cost;
 
-      hoursDisplay.textContent = `${hoursPerWeek} hrs`;
-      teamDisplay.textContent = `${teamMembers} ${teamMembers > 1 ? 'members' : 'member'}`;
-      costDisplay.textContent = `₹${costPerHour} / hr`;
-
-      const weeklyHoursSaved = (hoursPerWeek * teamMembers) * 0.60;
-      const annualHoursSaved = Math.round(weeklyHoursSaved * 52);
-      const annualCostSaved = Math.round(annualHoursSaved * costPerHour);
-
-      hoursSavedDisplay.textContent = `${annualHoursSaved.toLocaleString('en-IN')} hrs`;
-      annualSavingsDisplay.textContent = `₹${annualCostSaved.toLocaleString('en-IN')}`;
+      document.getElementById('annual-savings').innerHTML = `&#8377;${totalSavings.toLocaleString('en-IN')}`;
+      document.getElementById('hours-saved').textContent = `${annualHours.toLocaleString('en-IN')} hrs`;
     }
 
-    hoursSlider.addEventListener('input', () => { updateCalculator(); playBlip(400, 0.02); });
-    teamSlider.addEventListener('input', () => { updateCalculator(); playBlip(450, 0.02); });
-    costSlider.addEventListener('input', () => { updateCalculator(); playBlip(500, 0.02); });
-    updateCalculator();
+    hoursSlider.addEventListener('input', () => { playBlip(500, 0.02); updateROICalculation(); });
+    teamSlider.addEventListener('input', () => { playBlip(550, 0.02); updateROICalculation(); });
+    costSlider.addEventListener('input', () => { playBlip(600, 0.02); updateROICalculation(); });
+    updateROICalculation();
 
     // -------------------------------------------------------------
-    // 11. Contact Form & Clipboard Helpers
+    // 7. Resume Modal Controls & PDF Downloader
     // -------------------------------------------------------------
-    function handleContactSubmit(e) {
+    function openResumeModal() {
+      playBlip(700, 0.04);
+      document.getElementById('resume-modal').classList.remove('hidden');
+    }
+
+    function closeResumeModal() {
+      document.getElementById('resume-modal').classList.add('hidden');
+    }
+
+    window.addEventListener('click', (e) => {
+      const resModal = document.getElementById('resume-modal');
+      if (e.target === resModal) closeResumeModal();
+    });
+
+    function downloadActiveResume() {
+      playBlip(800, 0.05);
+      const customCV = localStorage.getItem('ayush_custom_cv_base64');
+      const customName = localStorage.getItem('ayush_custom_cv_name') || 'Kumar_Ayush_Ambstha_Data_Analyst_Resume.pdf';
+
+      const link = document.createElement('a');
+      link.href = customCV ? customCV : 'Kumar_Ayush_Ambstha_Updated_JobReady_Resume.pdf';
+      link.download = customName;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      showToast("Downloading verified resume PDF...");
+    }
+
+    function printResume() {
+      window.print();
+    }
+
+    // -------------------------------------------------------------
+    // 8. Contact Form Direct-to-Inbox Integration
+    // -------------------------------------------------------------
+    async function handleContactSubmit(e) {
       e.preventDefault();
-      playBlip(1000, 0.08);
+      playBlip(950, 0.06);
+
+      const form = document.getElementById('contact-form');
+      const submitBtn = document.getElementById('contact-submit-btn');
+      const btnText = document.getElementById('contact-btn-text');
+
       const name = document.getElementById('sender-name').value;
-      showToast(`Thank you, ${name}! Your inquiry has been received.`);
-      document.getElementById('contact-form').reset();
+      const email = document.getElementById('sender-email').value;
+      const subject = document.getElementById('sender-subject').value;
+      const message = document.getElementById('sender-msg').value;
+
+      btnText.textContent = "Dispatched to Ayush's Inbox...";
+      submitBtn.disabled = true;
+
+      try {
+        const response = await fetch("https://formspree.io/f/xbjvqkgp", {
+          method: "POST",
+          headers: { "Content-Type": "application/json", "Accept": "application/json" },
+          body: JSON.stringify({
+            name: name,
+            _replyto: email,
+            subject: `[Portfolio Inquiry] ${subject}`,
+            message: message,
+            _to: "ayushkumar.281299@gmail.com"
+          })
+        });
+
+        if (response.ok) {
+          showToast(`Thank you, ${name}! Your inquiry has been delivered directly to Ayush.`);
+          form.reset();
+        } else {
+          fallbackMailto(name, email, subject, message);
+        }
+      } catch (err) {
+        fallbackMailto(name, email, subject, message);
+      } finally {
+        btnText.textContent = "Send Direct Inquiry to Ayush";
+        submitBtn.disabled = false;
+      }
     }
 
-    function copyResumeLink() {
-      const contactInfo = `Ayush's Portfolio | Kumar Ayush Ambstha
-Role: Data Analyst & BI Specialist
+    function fallbackMailto(name, email, subject, message) {
+      window.location.href = `mailto:ayushkumar.281299@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent("From: " + name + " (" + email + ")\n\n" + message)}`;
+      showToast("Opening your default mail client to deliver note...");
+    }
+
+    function copyContactCard() {
+      const contactInfo = `Kumar Ayush Ambstha | Data Analyst & Analytics Engineer
 Email: ayushkumar.281299@gmail.com
 Phone: +91 9102853155
-Location: Delhi, India
-GitHub: https://github.com/ayush25-28
-LinkedIn: https://linkedin.com/in/ayush-ambstha`;
-
+Location: Delhi NCR, India
+LinkedIn: https://linkedin.com/in/ayush-ambstha
+GitHub: https://github.com/ayush25-28`;
       copyToClipboard(contactInfo);
-      showToast("Contact details copied to clipboard!");
+      showToast("Contact card copied to clipboard!");
     }
 
     function copyToClipboard(text) {
@@ -2020,8 +1891,195 @@ LinkedIn: https://linkedin.com/in/ayush-ambstha`;
     }
 
     // -------------------------------------------------------------
-    // 12. Animated Counters on Scroll
+    // 9. Discreet & Secure Admin Portal (Ayush Only)
     // -------------------------------------------------------------
+    function handleAdminEntryClick() {
+      playBlip(700, 0.04);
+      const isAdmin = localStorage.getItem('ayush_is_admin') === 'true';
+      if (isAdmin) {
+        openAdminDrawer();
+      } else {
+        openAdminAuthModal();
+      }
+    }
+
+    function openAdminAuthModal() {
+      document.getElementById('admin-auth-modal').classList.remove('hidden');
+    }
+
+    function closeAdminAuthModal() {
+      document.getElementById('admin-auth-modal').classList.add('hidden');
+    }
+
+    function openAdminDrawer() {
+      const drawer = document.getElementById('admin-cms-drawer');
+      drawer.classList.remove('translate-x-full');
+      showToast("Admin Session: Active");
+      updateAdminUIElements(true);
+    }
+
+    function closeAdminDrawer() {
+      const drawer = document.getElementById('admin-cms-drawer');
+      drawer.classList.add('translate-x-full');
+    }
+
+    function handleAdminLogin(e) {
+      e.preventDefault();
+      const pass = document.getElementById('admin-pass-input').value.trim();
+      if (pass === 'Pihu2528@') {
+        localStorage.setItem('ayush_is_admin', 'true');
+        closeAdminAuthModal();
+        openAdminDrawer();
+        renderProjects();
+        showToast("Authentication successful. Welcome Ayush!");
+      } else {
+        showToast("Incorrect master password. Access denied.");
+      }
+    }
+
+    function handleAdminLogout() {
+      localStorage.removeItem('ayush_is_admin');
+      closeAdminDrawer();
+      updateAdminUIElements(false);
+      renderProjects();
+      showToast("Logged out of Admin mode. Site is now Read-Only.");
+    }
+
+    function updateAdminUIElements(isAdmin) {
+      const lockIcon = document.getElementById('admin-lock-icon');
+      if (lockIcon) {
+        lockIcon.setAttribute('data-lucide', isAdmin ? 'unlock' : 'lock');
+        lucide.createIcons();
+      }
+    }
+
+    // Hotkey: Ctrl + Shift + A or Cmd + Shift + A
+    window.addEventListener('keydown', (e) => {
+      if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === 'A' || e.key === 'a')) {
+        e.preventDefault();
+        handleAdminEntryClick();
+      }
+    });
+
+    // Handle CV Upload in Admin Drawer
+    const cvInput = document.getElementById('cv-file-input');
+    cvInput.addEventListener('change', (e) => {
+      const file = e.target.files[0];
+      if (!file) return;
+
+      const reader = new FileReader();
+      reader.onload = function(evt) {
+        const base64Data = evt.target.result;
+        localStorage.setItem('ayush_custom_cv_base64', base64Data);
+        localStorage.setItem('ayush_custom_cv_name', file.name);
+
+        const status = document.getElementById('cv-status');
+        status.textContent = `Active CV: ${file.name} (Ready for downloads)`;
+        status.classList.remove('hidden');
+        showToast("New CV uploaded & linked to all download buttons!");
+      };
+      reader.readAsDataURL(file);
+    });
+
+    // Check active custom CV
+    const existingCV = localStorage.getItem('ayush_custom_cv_name');
+    if (existingCV) {
+      const status = document.getElementById('cv-status');
+      status.textContent = `Active CV: ${existingCV}`;
+      status.classList.remove('hidden');
+    }
+
+    // Handle Add New Project
+    function handleAddNewProject(e) {
+      e.preventDefault();
+      const title = document.getElementById('new-proj-title').value;
+      const category = document.getElementById('new-proj-category').value;
+      const desc = document.getElementById('new-proj-desc').value;
+      const flow = document.getElementById('new-proj-flow').value;
+      const metric = document.getElementById('new-proj-metric').value;
+      const url = document.getElementById('new-proj-url').value;
+      const tags = document.getElementById('new-proj-tags').value.split(',').map(s => s.trim()).filter(Boolean);
+
+      const projects = getProjects();
+      const newProj = {
+        id: "proj_custom_" + Date.now(),
+        category: category,
+        tagLabel: category.toUpperCase(),
+        badge: "Custom Added",
+        title: title,
+        desc: desc,
+        flow: flow,
+        metricVal: metric || "Production",
+        metricLbl: "Verified Impact",
+        metricVal2: "Live",
+        metricLbl2: "Verified",
+        tags: tags.length ? tags : ["Analytics", "SQL"],
+        url: url || "https://github.com/ayush25-28"
+      };
+
+      projects.unshift(newProj);
+      localStorage.setItem('ayush_portfolio_projects', JSON.stringify(projects));
+      renderProjects();
+      showToast(`Project "${title}" added to live grid!`);
+      e.target.reset();
+    }
+
+    function deleteCustomProject(id) {
+      if (confirm("Are you sure you want to remove this project?")) {
+        let projects = getProjects();
+        projects = projects.filter(p => p.id !== id);
+        localStorage.setItem('ayush_portfolio_projects', JSON.stringify(projects));
+        renderProjects();
+        showToast("Project removed from portfolio.");
+      }
+    }
+
+    // Handle Add New Skill
+    function handleAddNewSkill(e) {
+      e.preventDefault();
+      const cat = document.getElementById('new-skill-cat').value;
+      const name = document.getElementById('new-skill-name').value;
+      const pct = +document.getElementById('new-skill-pct').value;
+
+      const skills = getSkills();
+      const targetGroup = skills.find(s => s.title === cat || s.category === cat);
+      if (targetGroup) {
+        targetGroup.items.push({ name: name, pct: pct });
+        localStorage.setItem('ayush_portfolio_skills', JSON.stringify(skills));
+        renderSkills();
+        showToast(`Skill "${name}" added to ${cat}!`);
+        e.target.reset();
+      }
+    }
+
+    function resetAllCustomData() {
+      if (confirm("Reset portfolio back to default verified projects and skills?")) {
+        localStorage.removeItem('ayush_portfolio_projects');
+        localStorage.removeItem('ayush_portfolio_skills');
+        localStorage.removeItem('ayush_custom_cv_base64');
+        localStorage.removeItem('ayush_custom_cv_name');
+        renderProjects();
+        renderSkills();
+        showToast("Portfolio restored to default verified state.");
+      }
+    }
+
+    // Check initial admin state
+    if (localStorage.getItem('ayush_is_admin') === 'true') {
+      updateAdminUIElements(true);
+    }
+
+    // Mobile Menu Toggle
+    const mobileBtn = document.getElementById('mobile-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    document.querySelectorAll('.mobile-link').forEach(link => {
+      link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+    });
+
+    // Metric Counters on Scroll
     const counters = document.querySelectorAll('.counter');
     let counted = false;
 
